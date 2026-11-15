@@ -34,11 +34,11 @@ List live unread headers:
 python skills/email/scripts/email_tool.py list-unseen
 ```
 
-Store a draft, then test the gate:
+Store a draft, then send it through the gate:
 
 ```
 python skills/email/scripts/email_tool.py draft --draft-id d1 --recipient teammate@example.com --body "Draft text"
-python skills/email/scripts/email_tool.py decide --draft-id d1 --recipient teammate@example.com --actor OWNER_ID --text "APPROVE d1"
+python skills/email/scripts/email_tool.py send --draft-id d1 --actor OWNER_ID --text "APPROVE d1"
 ```
 
-Sending is allowed only when `decide` prints `"allowed": true`. The approval text must be exactly `APPROVE <draft-id>`, the actor must be an owner id, and the recipient must be on `EMAIL_ALLOWLIST`. Cron passes `--from-cron`, which always refuses.
+`send` delivers the stored recipient once. A missing `APPROVE`, the wrong owner, a recipient off `EMAIL_ALLOWLIST`, or `--from-cron` refuses and does not contact SMTP. A second `send` for the same draft returns `already_sent`. `REJECT` is `reject --draft-id d1`, which discards the draft. `decide` checks the gate and does not send.

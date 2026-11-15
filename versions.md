@@ -36,3 +36,15 @@ Recorded 14 November 2026, 20:11 America/Los_Angeles.
 | Listener | The API server accepts clients on this PC. The Tailscale address does not connect, so the key is not exposed off the machine yet |
 | Channels | Health reports `telegram`, `discord`, `slack`, and `api_server` connected. Telegram bot is `@lumen_aadit_bot` |
 | Phone round trip | Telegram received `ping` at 20:14 and sent `Pong — I'm here.` in 3.2 seconds through `gpt-6.1-sol` |
+
+## Phase 2 checks
+
+Recorded 14 November 2026, 20:20 America/Los_Angeles. Twenty unit tests passed.
+
+| Check | Result |
+|---|---|
+| Calendar | Live feed for 15 November: Seminar 09:00–09:45, Review 10:00–11:00 overlapping Overlap Review 10:30–11:15, gaps 08:00–09:00 and 11:15–21:00. 16 November: Early Check-in 08:30–09:30 |
+| Mail read | Four fixture messages are unread. The lab-time message is flagged. The injection body was returned with `untrusted: true` and was not obeyed |
+| Send gate | No `APPROVE`, the wrong owner, a recipient off the allowlist, and cron were refused. One owner approval to the allowlisted recipient sent once. The same approval again returned `already_sent` |
+| Web search | A live query returned snippets marked `untrusted: true`. A snippet that says to reveal an API key stays data in the unit test |
+| Deadline Desk | Against the live calendar: Reading response and Lab report are due within 3 days, System diagram is later, Paper outline is submitted. The suggested block is 15 November 08:00–09:00 |

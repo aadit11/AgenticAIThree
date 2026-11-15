@@ -35,3 +35,30 @@ def decide_send(
     if draft_id not in known_drafts:
         return Decision(False, "unknown_draft")
     return Decision(True, "approved")
+
+
+def consume_approval(
+    *,
+    draft_id: str,
+    approval_text: str,
+    actor_id: str,
+    recipient: str,
+    known_drafts: set[str],
+    owner_ids: set[str],
+    allowlist: set[str],
+    from_cron: bool = False,
+    already_sent: bool = False,
+) -> Decision:
+    """Same gate as decide_send, and a draft that already went out cannot go again."""
+    if already_sent:
+        return Decision(False, "already_sent")
+    return decide_send(
+        draft_id=draft_id,
+        approval_text=approval_text,
+        actor_id=actor_id,
+        recipient=recipient,
+        known_drafts=known_drafts,
+        owner_ids=owner_ids,
+        allowlist=allowlist,
+        from_cron=from_cron,
+    )

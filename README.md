@@ -4,7 +4,7 @@ Lumen is a proactive personal assistant for CSCI 599 Assignment 3 (Agentic AI, F
 
 The assistant's user is **Maya Ortiz**, a fictional graduate student in Los Angeles. Mail, calendar, teammates, and deadlines are synthetic test data on accounts created only for this course.
 
-Planning is in [plan.md](plan.md). Conventions for coding agents are in [AGENTS.md](AGENTS.md). Phase 2 skills, the approval gate, and the router tests are in this repo. Cloud deployment has not started.
+Planning is in [plan.md](plan.md). Conventions for coding agents are in [AGENTS.md](AGENTS.md). The four skills have been run against the live calendar and mailbox. Cloud deployment has not started.
 
 ## What it does
 

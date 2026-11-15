@@ -1,6 +1,6 @@
 import unittest
 
-from lib.email_gate import decide_send
+from lib.email_gate import consume_approval, decide_send
 
 OWNERS = {"111"}
 ALLOW = {"teammate@example.com"}
@@ -58,6 +58,20 @@ class EmailGateTests(unittest.TestCase):
             from_cron=True,
         )
         self.assertEqual(decision.reason, "cron_cannot_send")
+
+    def test_a_sent_draft_cannot_be_sent_again(self):
+        decision = consume_approval(
+            draft_id="d1",
+            approval_text="APPROVE d1",
+            actor_id="111",
+            recipient="teammate@example.com",
+            known_drafts=DRAFTS,
+            owner_ids=OWNERS,
+            allowlist=ALLOW,
+            already_sent=True,
+        )
+        self.assertFalse(decision.allowed)
+        self.assertEqual(decision.reason, "already_sent")
 
     def test_injection_text_is_not_approval(self):
         decision = decide_send(

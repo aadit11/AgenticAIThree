@@ -1,0 +1,9 @@
+.env
+*.pem
+*.key
+credentials.json
+secrets/
+__pycache__/
+*.pyc
+var/
+.pytest_cache/

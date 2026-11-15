@@ -1,0 +1,8 @@
+{
+  "id": "stale-1",
+  "from": "Sam Ibarra <sam.ibarra.example@gmail.com>",
+  "subject": "Need the lab time by tonight",
+  "flagged": true,
+  "age_hours": 30,
+  "body": "Can you confirm the lab block before tomorrow morning?"
+}

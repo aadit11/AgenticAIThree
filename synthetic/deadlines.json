@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Reading response",
+    "course": "Fictional Agents Studio",
+    "due": "2026-11-15T23:59:00-08:00",
+    "status": "open"
+  },
+  {
+    "title": "Lab report",
+    "course": "Fictional Systems Lab",
+    "due": "2026-11-16T23:59:00-08:00",
+    "status": "open"
+  },
+  {
+    "title": "System diagram",
+    "course": "Fictional Systems Lab",
+    "due": "2026-11-24T23:59:00-08:00",
+    "status": "open"
+  },
+  {
+    "title": "Paper outline",
+    "course": "Fictional Agents Studio",
+    "due": "2026-11-10T23:59:00-08:00",
+    "status": "submitted"
+  }
+]

@@ -17,7 +17,7 @@ Recorded 14 November 2026 while finishing Phase 0.
 | Calendar feed | Four events confirmed: Seminar 09:00–09:45, Review 10:00–11:00, Overlap Review 10:30–11:15 on 15 November, Early Check-in 08:30–09:30 on 16 November, America/Los_Angeles |
 | OpenAI | `gpt-6.1-sol` returned `pong` from a one-line completion |
 | Deadline Desk repo | https://github.com/aadit11/deadline-desk (public, reserved). The skill is published in Phase 8 |
-| Container image digest | Not built yet |
+| Container image digest | `sha256:65dd6c6035363f928d2ad88b64039ba0838fad05e8ffe45be2a63eb8a8b62f8f` |
 
 Enabled on the project in `.env`: Cloud Run, Cloud Storage, Secret Manager, and Cloud Logging.
 
@@ -70,3 +70,20 @@ Recorded 14 November 2026, 20:59 America/Los_Angeles. Four cron unit tests passe
 | Alert scan | Sent three new alerts: Reading response, Lab report, and the flagged lab-time mail. The next scan logged `0 new` | `hermes cron run lumen-alerts` succeeded and stayed quiet | 21:00, then every 30 minutes |
 | Memory consolidate | Rewrote `hermes/MEMORY.md` only. `USER.md` and `SOUL.md` were unchanged | `hermes cron run lumen-consolidate` succeeded | 21:15 |
 | Health | OpenAI answered a tiny prompt and Ollama responded | The scheduler run used the cached OpenAI success | 21:00, then every 10 minutes |
+
+## Phase 5 checks
+
+Recorded 14 November 2026, 23:07 America/Los_Angeles. The 48-hour window was not started.
+
+The container is Hermes 0.20.5, release `v2026.8.19`, commit `fcbd1076`. A later snapshot only publishes its dependency set for Python 3.14, so the image stays on this release and Python 3.11.
+
+| Check | Result |
+|---|---|
+| Image | Built non-root and pushed to Artifact Registry. Digest `sha256:65dd6c6035363f928d2ad88b64039ba0838fad05e8ffe45be2a63eb8a8b62f8f` |
+| Instance | Cloud Run instance `lumen` in `us-west1`, 1 vCPU, 1 GiB, restart policy `always`. URL `https://lumen-986080954772.us-west1.run.app` |
+| Isolation | Startup log: user `lumen`, uid 10001, gid 10001, effective capabilities `0`, `privileged=false` |
+| Secrets | Runtime keys come from Secret Manager. The gateway key is not in the image |
+| Bucket | The Hermes home is the mounted bucket. First boot wrote the study-group fact. After restart the log said `restart fact survived`, and the same sentence was read back from the bucket |
+| Gateway key | `/health` returned 200. `/v1/models` returned 401 with no key and with a wrong key, and 200 with the real key |
+| Telegram | The local gateway was stopped first. A second poll returned 409, so the instance holds the bot's update stream |
+| Not started | The graded 48-hour window |

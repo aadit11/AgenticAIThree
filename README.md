@@ -112,6 +112,20 @@ python scripts/simulate_rate_limit.py off
 
 `SIMULATE_RATE_LIMIT=1` does the same thing as the flag file `router/FORCE_LOCAL`. On the deployed instance that file lives in the Hermes home. Creating or removing it does not call OpenAI. With the flag gone, the next briefing goes back to `gpt-6.1-sol`.
 
+### Scheduled jobs
+
+All five use `America/Los_Angeles`. None of them can send email. Only the memory job rewrites `hermes/MEMORY.md`.
+
+| Job | Schedule | Run by hand |
+|---|---|---|
+| Morning briefing | `0 8 * * *` | `python -m cron.cli briefing` |
+| End-of-day recap | `0 21 * * *` | `python -m cron.cli recap` |
+| Alert scan | `*/30 * * * *` | `python -m cron.cli alerts` |
+| Memory consolidate | `15 * * * *` | `python -m cron.cli consolidate` |
+| Health | `*/10 * * * *` | `python -m cron.cli health` |
+
+`python cron/install_hermes.py` registers those schedules with Hermes. `hermes cron run <name>` fires one through the scheduler.
+
 ## Security
 
 - Container runs as a non-root user with a startup report of uid and capabilities.

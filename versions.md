@@ -58,3 +58,15 @@ Recorded 14 November 2026, 20:27 America/Los_Angeles. Fifteen router tests passe
 | Policy rows | `simulated_rate_limit`, `cloud_rate_limit`, `privacy`, `simple`, `reasoning`, `local_unavailable`, and `cloud_model_unavailable` each call only the chosen backend |
 | Live pair | One process logged a `simple` call answered by `gemma4:e2b` (61s cold, context 65536) and a `reasoning` call answered by `gpt-6.1-sol` |
 | Simulation | With `router/FORCE_LOCAL` present, the next short task logged `simulated_rate_limit` on Gemma. The cloud client was not called. The flag was removed afterward |
+
+## Phase 4 checks
+
+Recorded 14 November 2026, 20:59 America/Los_Angeles. Four cron unit tests passed. Hermes timezone is `America/Los_Angeles`.
+
+| Job | Hand run | Scheduler run | Next |
+|---|---|---|---|
+| Morning briefing | Built the Saturday briefing and delivered it. Open-Meteo reset the connection, so the forecast came from weather.gov: 55F, Mostly Clear | `hermes cron run lumen-briefing` succeeded | 15 November 08:00 |
+| End-of-day recap | Listed today's journal, the unsent draft, and Sunday's first events | `hermes cron run lumen-recap` succeeded | 21:00 |
+| Alert scan | Sent three new alerts: Reading response, Lab report, and the flagged lab-time mail. The next scan logged `0 new` | `hermes cron run lumen-alerts` succeeded and stayed quiet | 21:00, then every 30 minutes |
+| Memory consolidate | Rewrote `hermes/MEMORY.md` only. `USER.md` and `SOUL.md` were unchanged | `hermes cron run lumen-consolidate` succeeded | 21:15 |
+| Health | OpenAI answered a tiny prompt and Ollama responded | The scheduler run used the cached OpenAI success | 21:00, then every 10 minutes |

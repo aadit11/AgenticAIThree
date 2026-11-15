@@ -22,3 +22,17 @@ Recorded 14 November 2026 while finishing Phase 0.
 Enabled on the project in `.env`: Cloud Run, Cloud Storage, Secret Manager, and Cloud Logging.
 
 Hermes itself is the native Windows install, so the Linux installer script was not required.
+
+## Phase 1 checks
+
+Recorded 14 November 2026, 20:11 America/Los_Angeles.
+
+| Check | Result |
+|---|---|
+| Hermes release | 0.20.5, still the pinned release. Gateway process is running |
+| Profile | `SOUL.md` and `USER.md` in the Hermes home are the fictional Lumen and Maya files |
+| Cloud model | A gateway chat completion used `openai-api` and `gpt-6.1-sol` and replied `pong Lumen` |
+| Gateway key | 32 characters. `/v1/models` returned 401 with no key and with a wrong key, and 200 with the real key |
+| Listener | The API server accepts clients on this PC. The Tailscale address does not connect, so the key is not exposed off the machine yet |
+| Channels | Health reports `telegram`, `discord`, `slack`, and `api_server` connected. Telegram bot is `@lumen_aadit_bot` |
+| Phone round trip | Telegram received `ping` at 20:14 and sent `Pong — I'm here.` in 3.2 seconds through `gpt-6.1-sol` |

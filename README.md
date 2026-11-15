@@ -95,10 +95,22 @@ Exact commands will match the pinned Hermes release and will be filled in during
 
 ### Rate-limit simulation
 
-After the router exists:
+The router calls Gemma or `gpt-6.1-sol` and appends a JSON line to `var/router.log`.
 
-- Turn on: create `router/FORCE_LOCAL` on the Hermes home (or set `SIMULATE_RATE_LIMIT=1`) and send a short task. The log reason is `simulated_rate_limit`. OpenAI is not called.
-- Turn off: remove the flag. The next short task follows the normal policy.
+```
+python -m router.execute
+```
+
+That runs one short local call, one briefing call to `gpt-6.1-sol`, then one more short call with the simulation flag on. The third log reason is `simulated_rate_limit` and OpenAI is not contacted. The flag is removed at the end.
+
+Turn the flag on or off by itself:
+
+```
+python scripts/simulate_rate_limit.py on
+python scripts/simulate_rate_limit.py off
+```
+
+`SIMULATE_RATE_LIMIT=1` does the same thing as the flag file `router/FORCE_LOCAL`. On the deployed instance that file lives in the Hermes home. Creating or removing it does not call OpenAI. With the flag gone, the next briefing goes back to `gpt-6.1-sol`.
 
 ## Security
 

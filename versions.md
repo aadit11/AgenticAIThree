@@ -48,3 +48,13 @@ Recorded 14 November 2026, 20:20 America/Los_Angeles. Twenty unit tests passed.
 | Send gate | No `APPROVE`, the wrong owner, a recipient off the allowlist, and cron were refused. One owner approval to the allowlisted recipient sent once. The same approval again returned `already_sent` |
 | Web search | A live query returned snippets marked `untrusted: true`. A snippet that says to reveal an API key stays data in the unit test |
 | Deadline Desk | Against the live calendar: Reading response and Lab report are due within 3 days, System diagram is later, Paper outline is submitted. The suggested block is 15 November 08:00–09:00 |
+
+## Phase 3 checks
+
+Recorded 14 November 2026, 20:27 America/Los_Angeles. Fifteen router tests passed, with OpenAI and Ollama mocked.
+
+| Check | Result |
+|---|---|
+| Policy rows | `simulated_rate_limit`, `cloud_rate_limit`, `privacy`, `simple`, `reasoning`, `local_unavailable`, and `cloud_model_unavailable` each call only the chosen backend |
+| Live pair | One process logged a `simple` call answered by `gemma4:e2b` (61s cold, context 65536) and a `reasoning` call answered by `gpt-6.1-sol` |
+| Simulation | With `router/FORCE_LOCAL` present, the next short task logged `simulated_rate_limit` on Gemma. The cloud client was not called. The flag was removed afterward |

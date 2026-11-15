@@ -6,4 +6,5 @@ secrets/
 __pycache__/
 *.pyc
 var/
+router/FORCE_LOCAL
 .pytest_cache/

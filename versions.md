@@ -87,3 +87,15 @@ The container is Hermes 0.20.5, release `v2026.8.19`, commit `fcbd1076`. A later
 | Gateway key | `/health` returned 200. `/v1/models` returned 401 with no key and with a wrong key, and 200 with the real key |
 | Telegram | The local gateway was stopped first. A second poll returned 409, so the instance holds the bot's update stream |
 | Not started | The graded 48-hour window |
+
+## Phase 6 checks
+
+Recorded 15 November 2026, 13:37 America/Los_Angeles. The 48-hour window was not started.
+
+| Check | Result |
+|---|---|
+| Tailscale | The container runs Tailscale's userspace networking, with the SOCKS proxy from the Cloud Run guide. Startup logged `isolation: tailscale up` as uid 10001 |
+| Ollama bind | On this PC, Ollama listens on `127.0.0.1:11434` only. Tailscale Serve forwards that port inside the tailnet. A connection to the PC's ordinary network address on port 11434 was refused |
+| Gemma from the instance | The routing log on the bucket recorded `simple` answered by `gemma4:e2b` in 377ms, after the instance reached Ollama through the tailnet |
+| Cloud model from the instance | The same log recorded `reasoning` answered by `gpt-6.1-sol` |
+| Image | `sha256:58267514ab5762dc4cfa81b20d2f447db5180dccf3e79af5ae2eda97727e5bfa` |

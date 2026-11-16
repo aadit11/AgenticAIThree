@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import imaplib
 import json
+import os
 import sys
 import urllib.request
 from datetime import datetime, timedelta
@@ -29,13 +30,27 @@ from lib.deadlines import load_deadlines  # noqa: E402
 from lib.envfile import load_project_env, require  # noqa: E402
 
 LA = ZoneInfo("America/Los_Angeles")
-JOURNAL = ROOT / "var" / "journal.jsonl"
-ALERTS = ROOT / "var" / "alert_ids.json"
-DRAFTS = ROOT / "var" / "drafts.json"
-MEMORY = ROOT / "hermes" / "MEMORY.md"
-HEALTH_CACHE = ROOT / "var" / "health_cache.json"
+
+
+def _cloud_home() -> Path | None:
+    if os.environ.get("LUMEN_APP") and os.environ.get("HERMES_HOME"):
+        return Path(os.environ["HERMES_HOME"])
+    return None
+
+
+_HOME = _cloud_home()
+_STATE = (_HOME / "var") if _HOME else (ROOT / "var")
+JOURNAL = _STATE / "journal.jsonl"
+ALERTS = _STATE / "alert_ids.json"
+DRAFTS = _STATE / "drafts.json"
+MEMORY = (_HOME / "MEMORY.md") if _HOME else (ROOT / "hermes" / "MEMORY.md")
+HEALTH_CACHE = _STATE / "health_cache.json"
 DEADLINES = ROOT / "synthetic" / "deadlines.json"
-PROTECTED = (ROOT / "hermes" / "USER.md", ROOT / "hermes" / "SOUL.md")
+PROTECTED = (
+    (_HOME / "USER.md", _HOME / "SOUL.md")
+    if _HOME
+    else (ROOT / "hermes" / "USER.md", ROOT / "hermes" / "SOUL.md")
+)
 
 
 def _now() -> datetime:
@@ -159,16 +174,31 @@ def _save_alerts(ids: set[str]) -> None:
     ALERTS.write_text(json.dumps(sorted(ids), indent=2), encoding="utf-8")
 
 
+def _chat_id() -> str:
+    load_project_env()
+    direct = os.environ.get("TELEGRAM_ALLOWED_USER_ID", "").strip()
+    if direct:
+        return direct
+    allowed = os.environ.get("TELEGRAM_ALLOWED_USERS", "").strip()
+    first = allowed.split(",")[0].strip()
+    if not first:
+        raise SystemExit("missing TELEGRAM_ALLOWED_USER_ID")
+    return first
+
+
 def _notify(text: str) -> None:
     load_project_env()
-    body = json.dumps({"chat_id": require("TELEGRAM_ALLOWED_USER_ID"), "text": text}).encode()
+    body = json.dumps({"chat_id": _chat_id(), "text": text}).encode()
     request = urllib.request.Request(
         "https://api.telegram.org/bot" + require("TELEGRAM_BOT_TOKEN") + "/sendMessage",
         data=body,
         headers={"Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(request, timeout=20) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        raise RuntimeError("telegram send failed") from None
     if not payload.get("ok"):
         raise RuntimeError("telegram send failed")
 
@@ -245,16 +275,22 @@ def run_alerts(notify: bool = False) -> str:
 def run_consolidate() -> str:
     before = {path: path.read_bytes() for path in PROTECTED if path.is_file()}
     text = memory_text(read(JOURNAL))
-    MEMORY.parent.mkdir(parents=True, exist_ok=True)
-    MEMORY.write_text(text, encoding="utf-8")
-    home_memory = Path.home() / "AppData" / "Local" / "hermes" / "MEMORY.md"
-    if home_memory.parent.is_dir():
-        home_memory.write_text(text, encoding="utf-8")
+    if _HOME is not None:
+        fold = _STATE / "journal-fold.md"
+        fold.parent.mkdir(parents=True, exist_ok=True)
+        fold.write_text(text, encoding="utf-8")
+    else:
+        MEMORY.parent.mkdir(parents=True, exist_ok=True)
+        MEMORY.write_text(text, encoding="utf-8")
+        home_memory = Path.home() / "AppData" / "Local" / "hermes" / "MEMORY.md"
+        if home_memory.parent.is_dir():
+            home_memory.write_text(text, encoding="utf-8")
     for path, payload in before.items():
         if path.read_bytes() != payload:
             raise RuntimeError(f"consolidator rewrote {path.name}")
     append(JOURNAL, "consolidate", f"{len(read(JOURNAL))} journal rows folded")
-    return f"Memory updated ({MEMORY.name})."
+    target = "journal-fold.md" if _HOME is not None else MEMORY.name
+    return f"Memory updated ({target})."
 
 
 def run_health() -> str:

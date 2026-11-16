@@ -34,13 +34,13 @@ def cloud() -> tuple[str, str, str, str]:
     project = run([GCLOUD, "config", "get-value", "project"]).stdout.strip()
     number = run([GCLOUD, "projects", "describe", project, "--format=value(projectNumber)"]).stdout.strip()
     region = values.get("GCP_REGION") or "us-west1"
-    image = f"{region}-docker.pkg.dev/{project}/lumen/lumen:phase5"
+    image = f"{region}-docker.pkg.dev/{project}/lumen/lumen:phase6"
     return project, number, region, image
 
 
 def push(image: str, region: str) -> None:
     run([GCLOUD, "auth", "configure-docker", f"{region}-docker.pkg.dev", "--quiet"])
-    run(["docker", "tag", "lumen:phase5", image])
+    run(["docker", "tag", "lumen:phase6", image])
     run(["docker", "push", image])
     digest = run(
         [
@@ -68,10 +68,14 @@ def deploy(number: str, region: str, image: str, values: dict[str, str]) -> None
     plain = {
         "HERMES_HOME": "/hermes",
         "HOME": "/home/lumen",
+        "LUMEN_APP": "/opt/lumen/app",
         "API_SERVER_HOST": "0.0.0.0",
         "API_SERVER_PORT": "8080",
         "PYTHONUNBUFFERED": "1",
         "HERMES_TELEGRAM_DISABLE_FALLBACK_IPS": "1",
+        "OLLAMA_BASE_URL": "http://127.0.0.1:11434",
+        "OLLAMA_MODEL": values.get("OLLAMA_MODEL") or "gemma4:e2b",
+        "OLLAMA_UPSTREAM": _ollama_upstream(),
         "OPENAI_MODEL": values.get("OPENAI_MODEL") or "gpt-6.1-sol",
         "EMAIL_ADDRESS": values["EMAIL_ADDRESS"],
         "EMAIL_IMAP_HOST": values.get("EMAIL_IMAP_HOST") or "imap.gmail.com",
@@ -95,6 +99,7 @@ def deploy(number: str, region: str, image: str, values: dict[str, str]) -> None
             "API_SERVER_KEY=lumen-gateway-key:latest",
             "CALENDAR_ICS_URL=lumen-calendar-ics-url:latest",
             "EMAIL_APP_PASSWORD=lumen-email-app-password:latest",
+            "TAILSCALE_AUTHKEY=lumen-tailscale-authkey:latest",
         ]
     )
     flags = Path(r"C:\Users\hp\AppData\Local\Temp\lumen-deploy-flags.yaml")
@@ -139,6 +144,14 @@ def deploy(number: str, region: str, image: str, values: dict[str, str]) -> None
         flags.unlink(missing_ok=True)
     print("deployed")
     print(completed.stdout.strip())
+
+
+def _ollama_upstream() -> str:
+    completed = subprocess.run(["tailscale", "ip", "-4"], capture_output=True, text=True)
+    address = completed.stdout.strip().splitlines()[0] if completed.returncode == 0 else ""
+    if not address:
+        raise SystemExit("tailscale ip failed")
+    return address + ":11434"
 
 
 def json_quote(value: str) -> str:

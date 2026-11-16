@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(os.environ["LUMEN_APP"]) if os.environ.get("LUMEN_APP") else Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 
 from lib.search_tool import search  # noqa: E402

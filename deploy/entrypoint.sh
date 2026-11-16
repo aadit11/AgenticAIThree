@@ -12,7 +12,7 @@ timezone: America/Los_Angeles
 model:
   default: gpt-6.1-sol
   provider: openai-api
-  base_url: https://api.openai.com/v1
+  base_url: http://127.0.0.1:8642/v1/
 EOF
 fi
 fact="$HERMES_HOME/restart-fact.txt"
@@ -22,4 +22,34 @@ if [ ! -f "$fact" ]; then
 else
   echo "isolation: restart fact survived"
 fi
+if [ -n "${TAILSCALE_AUTHKEY:-}" ]; then
+  mkdir -p /tmp/tailscale
+  tailscaled --tun=userspace-networking --statedir=/tmp/tailscale --socket=/tmp/tailscale/tailscaled.sock --socks5-server=localhost:1055 >/tmp/tailscale/tailscaled.log 2>&1 &
+  i=0
+  while [ ! -S /tmp/tailscale/tailscaled.sock ] && [ "$i" -lt 30 ]; do
+    i=$((i + 1))
+    sleep 1
+  done
+  if tailscale --socket=/tmp/tailscale/tailscaled.sock up --auth-key="$TAILSCALE_AUTHKEY" --hostname=lumen-cloud --accept-dns=false --timeout=60s >/tmp/tailscale/up.log 2>&1; then
+    echo "isolation: tailscale up"
+  else
+    echo "isolation: tailscale failed"
+  fi
+  if [ -n "${OLLAMA_UPSTREAM:-}" ]; then
+    python /opt/lumen/ollama_forward.py &
+    sleep 1
+    if python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:11434/api/tags', timeout=20).read()"; then
+      echo "isolation: ollama tags ok"
+    else
+      echo "isolation: ollama tags failed"
+    fi
+  fi
+fi
+python /opt/lumen/install_cloud_jobs.py
+python /opt/lumen/openai_proxy.py &
+python /opt/lumen/install_cloud_jobs.py briefing >>"$HERMES_HOME/briefing-once.log" 2>&1 &
+python /opt/lumen/install_cloud_jobs.py health &
+python /opt/lumen/install_cloud_jobs.py alerts &
+python /opt/lumen/continuity.py >>"$HERMES_HOME/continuity.log" 2>&1 &
+(sleep 90; hermes cron tick; echo "isolation: cron tick done") &
 exec hermes gateway run

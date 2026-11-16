@@ -93,6 +93,7 @@ def main() -> None:
         "lumen-gateway-key": values["HERMES_GATEWAY_KEY"],
         "lumen-calendar-ics-url": values["CALENDAR_ICS_URL"],
         "lumen-email-app-password": values["EMAIL_APP_PASSWORD"],
+        "lumen-tailscale-authkey": values["TAILSCALE_AUTHKEY"],
     }
     for name, value in secrets.items():
         ensure_secret(name, value)

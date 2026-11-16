@@ -5,25 +5,42 @@ from __future__ import annotations
 import argparse
 import imaplib
 import json
+import os
 import smtplib
 import sys
 from email import message_from_bytes
 from email.message import EmailMessage
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(os.environ["LUMEN_APP"]) if os.environ.get("LUMEN_APP") else Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 
 from lib.email_gate import consume_approval, decide_send  # noqa: E402
 from lib.envfile import load_project_env, require  # noqa: E402
 
-DRAFTS = ROOT / "var" / "drafts.json"
+def _drafts_path() -> Path:
+    home = os.environ.get("HERMES_HOME", "").strip()
+    if os.environ.get("LUMEN_APP") and home:
+        return Path(home) / "var" / "drafts.json"
+    return ROOT / "var" / "drafts.json"
 
 
 def owner_ids() -> set[str]:
     load_project_env()
-    names = ("TELEGRAM_ALLOWED_USER_ID", "DISCORD_ALLOWED_USER_ID", "SLACK_ALLOWED_USERS")
-    return {require(name) for name in names}
+    found = set()
+    for name in (
+        "TELEGRAM_ALLOWED_USER_ID",
+        "TELEGRAM_ALLOWED_USERS",
+        "DISCORD_ALLOWED_USER_ID",
+        "DISCORD_ALLOWED_USERS",
+        "SLACK_ALLOWED_USERS",
+    ):
+        value = os.environ.get(name, "").strip()
+        if value:
+            found.add(value.split(",")[0].strip())
+    if not found:
+        raise SystemExit("missing owner id")
+    return found
 
 
 def allowlist() -> set[str]:
@@ -31,14 +48,16 @@ def allowlist() -> set[str]:
 
 
 def load_drafts() -> dict:
-    if not DRAFTS.is_file():
+    path = _drafts_path()
+    if not path.is_file():
         return {}
-    return json.loads(DRAFTS.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def save_drafts(drafts: dict) -> None:
-    DRAFTS.parent.mkdir(parents=True, exist_ok=True)
-    DRAFTS.write_text(json.dumps(drafts, indent=2), encoding="utf-8")
+    path = _drafts_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(drafts, indent=2), encoding="utf-8")
 
 
 def list_fixtures(folder: Path) -> None:

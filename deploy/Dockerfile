@@ -21,9 +21,17 @@ RUN python -c "import tomllib; from pathlib import Path; data=tomllib.loads(Path
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* /root/.cache
 
+COPY --from=docker.io/tailscale/tailscale:stable /usr/local/bin/tailscaled /usr/local/bin/tailscaled
+COPY --from=docker.io/tailscale/tailscale:stable /usr/local/bin/tailscale /usr/local/bin/tailscale
 RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin lumen
 COPY deploy/isolation-report.sh /usr/local/bin/isolation-report.sh
 COPY deploy/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY deploy/ollama_forward.py deploy/route_check.py deploy/openai_proxy.py deploy/install_cloud_jobs.py deploy/continuity.py /opt/lumen/
+COPY router /opt/lumen/app/router
+COPY lib /opt/lumen/app/lib
+COPY cron /opt/lumen/app/cron
+COPY skills /opt/lumen/app/skills
+COPY synthetic /opt/lumen/app/synthetic
 COPY hermes/SOUL.md hermes/USER.md /opt/lumen/seed/
 RUN chmod 755 /usr/local/bin/isolation-report.sh /usr/local/bin/entrypoint.sh \
     && chown -R lumen:lumen /opt/lumen
@@ -31,6 +39,7 @@ RUN chmod 755 /usr/local/bin/isolation-report.sh /usr/local/bin/entrypoint.sh \
 USER lumen
 ENV HERMES_HOME=/hermes \
     HOME=/home/lumen \
+    LUMEN_APP=/opt/lumen/app \
     API_SERVER_HOST=0.0.0.0 \
     API_SERVER_PORT=8080 \
     PYTHONUNBUFFERED=1

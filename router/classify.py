@@ -11,7 +11,29 @@ SIMPLE_MARKERS = (
     "urgent or not",
     "urgent/not",
 )
-PRIVACY_MARKERS = ("marked private", "keep this private", "private note")
+PRIVACY_MARKERS = (
+    "confidential",
+    "private",
+    "personal",
+    "sensitive",
+    "password",
+    "bank",
+    "medical",
+)
+REASONING_MARKERS = (
+    "step by step",
+    "analyze",
+    "compare",
+    "plan",
+    "explain",
+    "calendar",
+    "schedule",
+    "email",
+    "inbox",
+    "deadline",
+    "briefing",
+    "unread",
+)
 
 
 def message_text(content: object) -> str:
@@ -53,6 +75,9 @@ def classify_turn(text: str, *, has_tool_followup: bool) -> Task:
         or lowered.startswith("summarize:")
         or lowered.startswith("summary:")
     )
+    needs_reasoning = any(marker in lowered for marker in REASONING_MARKERS)
+    if not simple and not needs_reasoning and len(lowered) <= 80:
+        simple = True
     if has_tool_followup:
         privacy = False
         simple = False

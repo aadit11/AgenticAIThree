@@ -26,7 +26,8 @@ COPY --from=docker.io/tailscale/tailscale:stable /usr/local/bin/tailscale /usr/l
 RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin lumen
 COPY deploy/isolation-report.sh /usr/local/bin/isolation-report.sh
 COPY deploy/entrypoint.sh /usr/local/bin/entrypoint.sh
-COPY deploy/ollama_forward.py deploy/route_check.py deploy/openai_proxy.py deploy/install_cloud_jobs.py deploy/continuity.py /opt/lumen/
+COPY deploy/ollama_forward.py deploy/route_check.py deploy/openai_proxy.py deploy/install_cloud_jobs.py deploy/continuity.py deploy/web_ui.py deploy/enable_web_plugin.py deploy/write_runtime_env.py /opt/lumen/
+COPY deploy/plugins/web-approval /opt/lumen/plugins/web-approval
 COPY router /opt/lumen/app/router
 COPY lib /opt/lumen/app/lib
 COPY cron /opt/lumen/app/cron
@@ -40,8 +41,12 @@ USER lumen
 ENV HERMES_HOME=/hermes \
     HOME=/home/lumen \
     LUMEN_APP=/opt/lumen/app \
-    API_SERVER_HOST=0.0.0.0 \
-    API_SERVER_PORT=8080 \
+    PORT=8080 \
+    HERMES_PORT=8081 \
+    API_SERVER_ENABLED=true \
+    API_SERVER_HOST=127.0.0.1 \
+    API_SERVER_PORT=8081 \
+    LUMEN_RUNTIME_ENV=/home/lumen/lumen-runtime.env \
     PYTHONUNBUFFERED=1
 WORKDIR /home/lumen
 EXPOSE 8080

@@ -9,8 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ENV_PATH = ROOT / ".env"
 
 
-def load_project_env(path: Path = ENV_PATH) -> None:
-    """Set os.environ from path. Existing variables win."""
+def _apply_env_file(path: Path) -> None:
+    """Set missing names from path. Existing variables win."""
     if not path.is_file():
         return
     for raw in path.read_text(encoding="utf-8").splitlines():
@@ -21,6 +21,13 @@ def load_project_env(path: Path = ENV_PATH) -> None:
         key = key.strip()
         if key and key not in os.environ:
             os.environ[key] = value.strip()
+
+
+def load_project_env(path: Path = ENV_PATH) -> None:
+    """Load the container runtime file, then the project .env. Existing variables win."""
+    runtime = Path(os.environ.get("LUMEN_RUNTIME_ENV", "/home/lumen/lumen-runtime.env"))
+    _apply_env_file(runtime)
+    _apply_env_file(path)
 
 
 def require(name: str) -> str:

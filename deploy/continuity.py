@@ -14,10 +14,14 @@ MARKER = HOME / "var" / "continuity-done"
 MEMORY = HOME / "MEMORY.md"
 
 
+def _api_base() -> str:
+    return "http://127.0.0.1:" + os.environ.get("HERMES_PORT", "8081")
+
+
 def wait_for_gateway() -> bool:
     for _ in range(60):
         try:
-            with urllib.request.urlopen("http://127.0.0.1:8080/health", timeout=5) as response:
+            with urllib.request.urlopen(_api_base() + "/health", timeout=5) as response:
                 if response.status == 200:
                     return True
         except Exception:
@@ -31,7 +35,7 @@ def ask(prompt: str) -> str:
         {"model": "hermes-agent", "messages": [{"role": "user", "content": prompt}]}
     ).encode()
     request = urllib.request.Request(
-        "http://127.0.0.1:8080/v1/chat/completions",
+        _api_base() + "/v1/chat/completions",
         data=body,
         headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"},
         method="POST",

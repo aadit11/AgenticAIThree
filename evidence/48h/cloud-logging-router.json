@@ -1,0 +1,1430 @@
+﻿[
+  {
+    "insertId": "6afa58b300036a796588f64e",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4111,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:13:23-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:13:23.228856927Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:13:23.223865Z"
+  },
+  {
+    "insertId": "6afa58b3000ecfc8fa6b9933",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4858,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:13:23-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:13:24.228402059Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:13:23.970696Z"
+  },
+  {
+    "insertId": "6afa58b70002a6dab4104bf3",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 1977,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:13:27-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:13:27.225938679Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:13:27.173786Z"
+  },
+  {
+    "insertId": "6afa58ef000588ec4e1bdace",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2294,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:14:23-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:14:23.366995840Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:14:23.362732Z"
+  },
+  {
+    "insertId": "6afa58ef000a86fc8be4730a",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2621,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:14:23-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:14:23.702005740Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:14:23.689916Z"
+  },
+  {
+    "insertId": "6afa59f90004ffa67d7b7d35",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2044,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:18:49-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:18:49.331529961Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:18:49.327590Z"
+  },
+  {
+    "insertId": "6afa59f9000a5d59c587c735",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2395,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-15T17:18:49-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-16T01:18:49.998974029Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-16T01:18:49.679257Z"
+  },
+  {
+    "insertId": "6afe712100026ad5512bc620",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 30474,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T19:46:41-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:46:41.169445888Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:46:41.158421Z"
+  },
+  {
+    "insertId": "6afe7122000783e35737ae20",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 31808,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T19:46:42-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:46:42.827158118Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:46:42.492515Z"
+  },
+  {
+    "insertId": "6afe7123000bb2773995791c",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4390,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T19:46:43-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:46:43.828631308Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:46:43.766583Z"
+  },
+  {
+    "insertId": "6afe7136000d2c32972c6122",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 6627,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T19:47:02-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:47:02.869949221Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:47:02.863282Z"
+  },
+  {
+    "insertId": "6afe72e70003f926687bfd34",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 24984,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T19:54:15-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:54:15.265041020Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:54:15.260390Z"
+  },
+  {
+    "insertId": "6afe72f20008e925ed810394",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 5521,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T19:54:26-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:54:26.591094928Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:54:26.583973Z"
+  },
+  {
+    "insertId": "6afe7362000b4ce1fb5d441d",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4926,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "local_unavailable",
+      "success": true,
+      "target": "cloud",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T19:56:18-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:56:18.801093842Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:56:18.740577Z"
+  },
+  {
+    "insertId": "6afe739f0005f0196ce4e314",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 21055,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "privacy",
+      "success": true,
+      "target": "local",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T19:57:19-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T03:57:19.395978648Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T03:57:19.389145Z"
+  },
+  {
+    "insertId": "6afe74f60001fd8988ed8c9f",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 1394,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:03:02-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:03:02.137083993Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:03:02.130441Z"
+  },
+  {
+    "insertId": "6afe7509000486ce5d3a2c95",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4094,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:03:21-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:03:21.300615414Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:03:21.296654Z"
+  },
+  {
+    "insertId": "6afe7594000cb9dcffbfc349",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2292,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "local_unavailable",
+      "success": true,
+      "target": "cloud",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T20:05:40-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:05:40.852689825Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:05:40.834012Z"
+  },
+  {
+    "insertId": "6afe75dd0008eecb9b8012ab",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 24725,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "privacy",
+      "success": true,
+      "target": "local",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T20:06:53-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:06:53.590646388Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:06:53.585419Z"
+  },
+  {
+    "insertId": "6afe75e00009152287b82556",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 1647,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "privacy",
+      "success": true,
+      "target": "local",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T20:06:56-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:06:56.920625426Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:06:56.595234Z"
+  },
+  {
+    "insertId": "6afe761f000206afe51b6c61",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 5638,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:07:59-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:07:59.140113457Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:07:59.132783Z"
+  },
+  {
+    "insertId": "6afe762600007ba47565bd79",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 5384,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:08:06-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:08:06.130966149Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:08:06.031652Z"
+  },
+  {
+    "insertId": "6afe76420001dfd5f5b52d56",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4073,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:08:34-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:08:34.130990457Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:08:34.122837Z"
+  },
+  {
+    "insertId": "6afe764500035ed5cdb9aac3",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 6849,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:08:37-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:08:37.458836142Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:08:37.220885Z"
+  },
+  {
+    "insertId": "6afe766f00096038c8fc982b",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3393,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:09:19-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:09:19.622983936Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:09:19.614456Z"
+  },
+  {
+    "insertId": "6afe76720004004b2fb4c6ab",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 6027,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:09:22-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:09:22.286152538Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:09:22.262219Z"
+  },
+  {
+    "insertId": "6afe76b1000880dff0c7a82b",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2267,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:10:25-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:10:25.561065731Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:10:25.557279Z"
+  },
+  {
+    "insertId": "6afe76b50008f1a28c6b6a8b",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 6279,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:10:29-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:10:29.890900955Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:10:29.586146Z"
+  },
+  {
+    "insertId": "6afe7704000a9f850e640932",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3873,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:11:48-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:11:48.701301088Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:11:48.696197Z"
+  },
+  {
+    "insertId": "6afe7707000e57b665ce4526",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 7096,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:11:51-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:11:52.031178354Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:11:51.939958Z"
+  },
+  {
+    "insertId": "6afe77520005925c4f40c8b9",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3916,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:13:06-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:13:06.378716583Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:13:06.365148Z"
+  },
+  {
+    "insertId": "6afe7752000f31e2a4f765db",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4545,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:13:06-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:13:07.035918369Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:13:06.995810Z"
+  },
+  {
+    "insertId": "6afe77590004af0122a09a77",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3307,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:13:13-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:13:13.363305640Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:13:13.306945Z"
+  },
+  {
+    "insertId": "6afe78ed000823560a3d15af",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 5220,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:19:57-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:19:57.540393143Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:19:57.533334Z"
+  },
+  {
+    "insertId": "6afe79110001ae683d688239",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3458,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:20:33-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:20:33.113922785Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:20:33.110184Z"
+  },
+  {
+    "insertId": "6afe79110006278425f2e845",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3751,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:20:33-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:20:33.450253644Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:20:33.403332Z"
+  },
+  {
+    "insertId": "6afe791f0009998a698796eb",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2811,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:20:47-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:20:47.635067992Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:20:47.629130Z"
+  },
+  {
+    "insertId": "6afe792d00084583d9dbac92",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4568,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:21:01-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:21:01.548429277Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:21:01.542083Z"
+  },
+  {
+    "insertId": "6afe793400069aaceae230f5",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 5037,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:21:08-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:21:08.539562376Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:21:08.432812Z"
+  },
+  {
+    "insertId": "6afe7938000ecc54970a788b",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3486,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:21:12-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:21:13.214231516Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:21:12.969812Z"
+  },
+  {
+    "insertId": "6afe79c2000eca70d68a5214",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 6150,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "simple",
+      "success": true,
+      "target": "local",
+      "task_type": "summarize",
+      "timestamp": "2026-11-18T20:23:30-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:23:30.975537407Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:23:30.969328Z"
+  },
+  {
+    "insertId": "6afe79d300048762f65ed6c0",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3468,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:23:47-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:23:47.301777818Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:23:47.296802Z"
+  },
+  {
+    "insertId": "6afe7a26000eda3cf34ceca2",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2698,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "local_unavailable",
+      "success": true,
+      "target": "cloud",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T20:25:10-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:25:11.258308148Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:25:10.973372Z"
+  },
+  {
+    "insertId": "6afe7a67000d04fd63b8b1a6",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 25252,
+      "model_answered": "gemma4:e2b",
+      "model_requested": "gemma4:e2b",
+      "reason": "privacy",
+      "success": true,
+      "target": "local",
+      "task_type": "rewrite",
+      "timestamp": "2026-11-18T20:26:15-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:26:15.860192363Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:26:15.853245Z"
+  },
+  {
+    "insertId": "6afe7a9f000dc02afc2777d3",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3759,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:27:11-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:27:11.908529387Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:27:11.901162Z"
+  },
+  {
+    "insertId": "6afe7aa300083f825e383650",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2504,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:27:15-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:27:15.569507842Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:27:15.540546Z"
+  },
+  {
+    "insertId": "6afe7ac80009cecb926e66e8",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 2858,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:27:52-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:27:52.648360361Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:27:52.642763Z"
+  },
+  {
+    "insertId": "6afe7acb0001e319b6b5c181",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 5350,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:27:55-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:27:55.313708815Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:27:55.123673Z"
+  },
+  {
+    "insertId": "6afe7aed000e37474a16e121",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3764,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:28:29-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:28:29.935372746Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:28:29.931655Z"
+  },
+  {
+    "insertId": "6afe7aee0007d62c463f963f",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 4339,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:28:30-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:28:30.603839921Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:28:30.513580Z"
+  },
+  {
+    "insertId": "6afe7af40006f316798bd83c",
+    "jsonPayload": {
+      "component": "lumen-router",
+      "latency_ms": 3325,
+      "model_answered": "gpt-6.1-sol",
+      "model_requested": "gpt-6.1-sol",
+      "reason": "reasoning",
+      "success": true,
+      "target": "cloud",
+      "task_type": "brief",
+      "timestamp": "2026-11-18T20:28:36-08:00"
+    },
+    "labels": {
+      "instanceId": "00e8a408bdd92845cb2b2630b1cfe8c214db2a6435ea0f351ea88d08415bf37ff1cd1b0f5ef6ec77fe142239bf5fd340de40d1e4ce6c40200955606bd73d2204c3c228db3308c7d9a23960184b28c6172789a0de6e077f1f58e5fa"
+    },
+    "logName": "projects/agenticaithree/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-19T04:28:36.630809757Z",
+    "resource": {
+      "labels": {
+        "instance_name": "lumen",
+        "location": "us-west1",
+        "project_id": "agenticaithree"
+      },
+      "type": "cloud_run_instance"
+    },
+    "timestamp": "2026-11-19T04:28:36.455446Z"
+  }
+]

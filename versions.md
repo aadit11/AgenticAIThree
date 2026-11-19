@@ -98,4 +98,26 @@ Recorded 15 November 2026, 13:37 America/Los_Angeles. The 48-hour window was not
 | Ollama bind | On this PC, Ollama listens on `127.0.0.1:11434` only. Tailscale Serve forwards that port inside the tailnet. A connection to the PC's ordinary network address on port 11434 was refused |
 | Gemma from the instance | The routing log on the bucket recorded `simple` answered by `gemma4:e2b` in 377ms, after the instance reached Ollama through the tailnet |
 | Cloud model from the instance | The same log recorded `reasoning` answered by `gpt-6.1-sol` |
-| Image | `sha256:58267514ab5762dc4cfa81b20d2f447db5180dccf3e79af5ae2eda97727e5bfa` |
+| Image | `sha256:699f621fdcad1c97c901bc47c03e80e4dc2d94f1ba7eb965d078b674482dc02d` |
+
+The 15 November evening image adds the grader chat. `https://lumen-986080954772.us-west1.run.app/` returns the chat page. `/health` returns Hermes 0.20.5. `/v1/models` returns 401 until the grader pastes `API_SERVER_KEY`.
+
+## Phase 7 dry run
+
+Recorded 15 November 2026, 17:00 America/Los_Angeles. The graded 48-hour window was not started.
+
+| Check | Result |
+|---|---|
+| Briefing | Startup marker `var/cloud-briefing-sent` is present. Later boots logged `briefing already sent` and did not send it again |
+| Alerts | The three known alerts stayed in `var/alert_ids.json`. The 17:00 scheduled scan finished with empty output, so nothing was sent again |
+| Restart | Instance restart at 16:49 logged `restart fact survived`. The fact is still "Maya's fictional study group meets in Leavey 2." |
+| Scheduler after restart | Health ran at 16:51 (`OpenAI cached success; Ollama ok`). Alerts ran at 17:00 without the earlier `missing EMAIL_IMAP_HOST` failure |
+| Chat | `/health` returned 200 after the restart |
+
+Hermes removes mailbox settings from scheduled scripts. The container now writes those settings to a local file at boot, and the jobs read that file. The file is not in the bucket.
+
+## 48-hour window
+
+Started 15 November 2026, 17:37:53 America/Los_Angeles (`2026-11-16T01:37:53Z`). The instance was already running from the 16:49 restart. It was not restarted or redeployed to open the window. `/health` returned Hermes 0.20.5. The local Hermes desktop app was not running. The start line is `gs://lumen-home-agenticaithree/window-start.txt`.
+
+The window ends at or after 17 November 2026, 17:37:53 America/Los_Angeles (`2026-11-18T01:37:53Z`). Export logs after that time. Do not stop the instance before the export.

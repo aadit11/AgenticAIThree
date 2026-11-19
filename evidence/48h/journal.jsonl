@@ -1,0 +1,357 @@
+{"timestamp": "2026-11-15T14:01:04-08:00", "source": "briefing", "event": "morning briefing"}
+{"timestamp": "2026-11-15T14:15:38-08:00", "source": "consolidate", "event": "1 journal rows folded"}
+{"timestamp": "2026-11-15T15:15:40-08:00", "source": "consolidate", "event": "2 journal rows folded"}
+{"timestamp": "2026-11-15T15:44:16-08:00", "source": "health", "event": "Health: OpenAI ok; Ollama ok."}
+{"timestamp": "2026-11-15T15:44:17-08:00", "source": "alert", "event": "3 new"}
+{"timestamp": "2026-11-15T15:50:22-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T16:00:29-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T16:10:32-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T16:15:30-08:00", "source": "consolidate", "event": "8 journal rows folded"}
+{"timestamp": "2026-11-15T16:20:38-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T16:30:51-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T16:41:07-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T16:51:08-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T17:00:12-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T17:00:20-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T17:10:22-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T17:15:20-08:00", "source": "consolidate", "event": "16 journal rows folded"}
+{"timestamp": "2026-11-15T17:20:22-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T17:30:28-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T17:30:37-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T17:40:38-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T17:50:43-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T18:01:02-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T18:01:10-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T18:10:53-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T18:15:50-08:00", "source": "consolidate", "event": "25 journal rows folded"}
+{"timestamp": "2026-11-15T18:20:58-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T18:30:58-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T18:31:06-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T18:40:08-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T18:50:13-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T19:00:14-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T19:00:22-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T19:10:23-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T19:15:21-08:00", "source": "consolidate", "event": "34 journal rows folded"}
+{"timestamp": "2026-11-15T19:20:29-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-15T19:30:29-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T20:00:44-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T20:15:52-08:00", "source": "consolidate", "event": "38 journal rows folded"}
+{"timestamp": "2026-11-15T20:31:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T21:00:16-08:00", "source": "recap", "event": "end of day"}
+{"timestamp": "2026-11-15T21:00:19-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T21:15:24-08:00", "source": "consolidate", "event": "42 journal rows folded"}
+{"timestamp": "2026-11-15T21:30:32-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T22:00:47-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T22:15:54-08:00", "source": "consolidate", "event": "45 journal rows folded"}
+{"timestamp": "2026-11-15T22:31:02-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T23:00:18-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-15T23:15:25-08:00", "source": "consolidate", "event": "48 journal rows folded"}
+{"timestamp": "2026-11-15T23:30:33-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T00:00:48-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T00:10:59-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T00:15:56-08:00", "source": "consolidate", "event": "52 journal rows folded"}
+{"timestamp": "2026-11-16T00:30:06-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T01:00:19-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T01:15:27-08:00", "source": "consolidate", "event": "55 journal rows folded"}
+{"timestamp": "2026-11-16T01:30:38-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T02:00:51-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T02:15:59-08:00", "source": "consolidate", "event": "58 journal rows folded"}
+{"timestamp": "2026-11-16T02:30:09-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T03:00:24-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T03:15:30-08:00", "source": "consolidate", "event": "61 journal rows folded"}
+{"timestamp": "2026-11-16T03:20:39-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T03:30:38-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T03:30:46-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T03:40:49-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T03:50:57-08:00", "source": "health", "event": "Health: OpenAI ok; Ollama ok."}
+{"timestamp": "2026-11-16T04:00:54-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T04:01:02-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T04:11:04-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T04:16:01-08:00", "source": "consolidate", "event": "70 journal rows folded"}
+{"timestamp": "2026-11-16T04:20:09-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T04:30:09-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T05:00:25-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T05:15:32-08:00", "source": "consolidate", "event": "74 journal rows folded"}
+{"timestamp": "2026-11-16T05:30:40-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T06:00:56-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T06:15:02-08:00", "source": "consolidate", "event": "77 journal rows folded"}
+{"timestamp": "2026-11-16T06:30:10-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T07:00:27-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T07:15:35-08:00", "source": "consolidate", "event": "80 journal rows folded"}
+{"timestamp": "2026-11-16T07:30:45-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T08:02:20-08:00", "source": "briefing", "event": "morning briefing"}
+{"timestamp": "2026-11-16T08:02:25-08:00", "source": "alert", "event": "1 new"}
+{"timestamp": "2026-11-16T08:15:06-08:00", "source": "consolidate", "event": "84 journal rows folded"}
+{"timestamp": "2026-11-16T08:30:15-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T09:00:32-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T09:15:41-08:00", "source": "consolidate", "event": "87 journal rows folded"}
+{"timestamp": "2026-11-16T09:30:49-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T10:00:04-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T10:15:12-08:00", "source": "consolidate", "event": "90 journal rows folded"}
+{"timestamp": "2026-11-16T10:30:21-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T11:00:37-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T11:15:44-08:00", "source": "consolidate", "event": "93 journal rows folded"}
+{"timestamp": "2026-11-16T11:30:53-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T12:00:07-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T12:15:14-08:00", "source": "consolidate", "event": "96 journal rows folded"}
+{"timestamp": "2026-11-16T12:20:23-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T12:30:23-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T12:30:30-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T12:40:33-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T13:00:38-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T13:10:49-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T13:15:46-08:00", "source": "consolidate", "event": "103 journal rows folded"}
+{"timestamp": "2026-11-16T13:20:55-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T13:30:55-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T13:31:03-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T13:41:05-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T13:50:05-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T14:00:10-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T14:00:18-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T14:10:39-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T14:15:36-08:00", "source": "consolidate", "event": "112 journal rows folded"}
+{"timestamp": "2026-11-16T14:20:45-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T14:30:45-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T14:30:52-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T14:40:55-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T14:51:00-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T15:01:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T15:01:08-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T15:15:07-08:00", "source": "consolidate", "event": "120 journal rows folded"}
+{"timestamp": "2026-11-16T15:30:17-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T16:00:32-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T16:10:43-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T16:15:40-08:00", "source": "consolidate", "event": "124 journal rows folded"}
+{"timestamp": "2026-11-16T16:20:49-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T16:30:49-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T17:00:05-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T17:15:13-08:00", "source": "consolidate", "event": "128 journal rows folded"}
+{"timestamp": "2026-11-16T17:30:25-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T18:00:42-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T18:15:48-08:00", "source": "consolidate", "event": "131 journal rows folded"}
+{"timestamp": "2026-11-16T18:30:56-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T19:00:11-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T19:00:19-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T19:10:22-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T19:15:19-08:00", "source": "consolidate", "event": "136 journal rows folded"}
+{"timestamp": "2026-11-16T19:20:28-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T19:30:30-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T19:30:39-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T19:40:38-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T19:50:43-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T20:00:43-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T20:00:51-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-16T20:15:51-08:00", "source": "consolidate", "event": "144 journal rows folded"}
+{"timestamp": "2026-11-16T20:31:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T21:00:36-08:00", "source": "recap", "event": "end of day"}
+{"timestamp": "2026-11-16T21:01:03-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T21:15:23-08:00", "source": "consolidate", "event": "148 journal rows folded"}
+{"timestamp": "2026-11-16T21:30:45-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T22:00:49-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T22:15:57-08:00", "source": "consolidate", "event": "151 journal rows folded"}
+{"timestamp": "2026-11-16T22:30:05-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T23:00:20-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-16T23:15:28-08:00", "source": "consolidate", "event": "154 journal rows folded"}
+{"timestamp": "2026-11-16T23:30:36-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T00:00:52-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T00:16:00-08:00", "source": "consolidate", "event": "157 journal rows folded"}
+{"timestamp": "2026-11-17T00:30:09-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T01:00:26-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T01:15:30-08:00", "source": "consolidate", "event": "160 journal rows folded"}
+{"timestamp": "2026-11-17T02:00:54-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T02:16:01-08:00", "source": "consolidate", "event": "162 journal rows folded"}
+{"timestamp": "2026-11-17T02:30:10-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T03:00:28-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T03:15:34-08:00", "source": "consolidate", "event": "165 journal rows folded"}
+{"timestamp": "2026-11-17T03:31:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T04:00:59-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T04:15:05-08:00", "source": "consolidate", "event": "168 journal rows folded"}
+{"timestamp": "2026-11-17T04:30:14-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T05:00:50-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T05:15:37-08:00", "source": "consolidate", "event": "171 journal rows folded"}
+{"timestamp": "2026-11-17T05:30:46-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T06:01:03-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T06:15:10-08:00", "source": "consolidate", "event": "174 journal rows folded"}
+{"timestamp": "2026-11-17T06:30:21-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T07:00:37-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T07:15:44-08:00", "source": "consolidate", "event": "177 journal rows folded"}
+{"timestamp": "2026-11-17T07:30:55-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T08:01:30-08:00", "source": "briefing", "event": "morning briefing"}
+{"timestamp": "2026-11-17T08:01:46-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T08:15:18-08:00", "source": "consolidate", "event": "181 journal rows folded"}
+{"timestamp": "2026-11-17T08:30:27-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T09:00:42-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T09:15:56-08:00", "source": "consolidate", "event": "184 journal rows folded"}
+{"timestamp": "2026-11-17T09:30:03-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T10:01:16-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T10:15:30-08:00", "source": "consolidate", "event": "187 journal rows folded"}
+{"timestamp": "2026-11-17T10:30:39-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T11:00:55-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T11:15:02-08:00", "source": "consolidate", "event": "190 journal rows folded"}
+{"timestamp": "2026-11-17T11:20:10-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T11:30:10-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T11:30:18-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T11:40:21-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T11:50:26-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T12:00:27-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T12:00:34-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T12:10:36-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T12:15:33-08:00", "source": "consolidate", "event": "199 journal rows folded"}
+{"timestamp": "2026-11-17T12:20:43-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T12:30:43-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T12:30:51-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T12:40:53-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T12:50:58-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T13:01:02-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T13:01:11-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T13:10:12-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T13:15:09-08:00", "source": "consolidate", "event": "208 journal rows folded"}
+{"timestamp": "2026-11-17T13:20:17-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T13:30:18-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T13:30:26-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T13:40:27-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T13:50:32-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T14:00:35-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T14:00:43-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T14:10:42-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T14:15:40-08:00", "source": "consolidate", "event": "217 journal rows folded"}
+{"timestamp": "2026-11-17T14:20:48-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T14:30:50-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T15:00:03-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T15:15:11-08:00", "source": "consolidate", "event": "221 journal rows folded"}
+{"timestamp": "2026-11-17T15:30:20-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T15:40:30-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T15:50:36-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T16:00:36-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T16:00:44-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T16:10:49-08:00", "source": "health", "event": "Health: OpenAI ok; Ollama ok."}
+{"timestamp": "2026-11-17T16:15:44-08:00", "source": "consolidate", "event": "228 journal rows folded"}
+{"timestamp": "2026-11-17T16:20:52-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T16:30:53-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T16:31:00-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-17T17:00:07-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T17:15:15-08:00", "source": "consolidate", "event": "233 journal rows folded"}
+{"timestamp": "2026-11-17T17:30:23-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T18:00:41-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T18:15:50-08:00", "source": "consolidate", "event": "236 journal rows folded"}
+{"timestamp": "2026-11-17T18:31:42-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T19:00:13-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T19:15:21-08:00", "source": "consolidate", "event": "239 journal rows folded"}
+{"timestamp": "2026-11-17T19:30:30-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T20:00:44-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T20:15:52-08:00", "source": "consolidate", "event": "242 journal rows folded"}
+{"timestamp": "2026-11-17T20:31:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T21:00:15-08:00", "source": "recap", "event": "end of day"}
+{"timestamp": "2026-11-17T21:00:18-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T21:15:22-08:00", "source": "consolidate", "event": "246 journal rows folded"}
+{"timestamp": "2026-11-17T21:30:30-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T22:01:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T22:15:53-08:00", "source": "consolidate", "event": "249 journal rows folded"}
+{"timestamp": "2026-11-17T22:31:02-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T23:00:15-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-17T23:15:22-08:00", "source": "consolidate", "event": "252 journal rows folded"}
+{"timestamp": "2026-11-17T23:30:30-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T00:00:57-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T00:15:51-08:00", "source": "consolidate", "event": "255 journal rows folded"}
+{"timestamp": "2026-11-18T00:30:59-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T00:31:07-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T00:40:09-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T00:50:13-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T01:00:18-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T01:00:26-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T01:10:23-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T01:15:21-08:00", "source": "consolidate", "event": "263 journal rows folded"}
+{"timestamp": "2026-11-18T01:20:29-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T01:30:29-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T01:30:37-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T01:40:39-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T01:50:44-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T02:00:44-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T02:15:51-08:00", "source": "consolidate", "event": "270 journal rows folded"}
+{"timestamp": "2026-11-18T02:31:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T03:00:16-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T03:15:21-08:00", "source": "consolidate", "event": "273 journal rows folded"}
+{"timestamp": "2026-11-18T03:30:29-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T04:00:44-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T04:15:52-08:00", "source": "consolidate", "event": "276 journal rows folded"}
+{"timestamp": "2026-11-18T04:31:00-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T05:00:23-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T05:15:22-08:00", "source": "consolidate", "event": "279 journal rows folded"}
+{"timestamp": "2026-11-18T05:30:30-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T06:00:45-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T06:15:52-08:00", "source": "consolidate", "event": "282 journal rows folded"}
+{"timestamp": "2026-11-18T06:31:01-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T07:02:25-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T07:15:23-08:00", "source": "consolidate", "event": "285 journal rows folded"}
+{"timestamp": "2026-11-18T07:30:32-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T08:02:13-08:00", "source": "briefing", "event": "morning briefing"}
+{"timestamp": "2026-11-18T08:02:16-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T08:15:55-08:00", "source": "consolidate", "event": "289 journal rows folded"}
+{"timestamp": "2026-11-18T08:30:08-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T09:00:18-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T09:15:26-08:00", "source": "consolidate", "event": "292 journal rows folded"}
+{"timestamp": "2026-11-18T09:30:35-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T10:00:49-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T10:15:56-08:00", "source": "consolidate", "event": "295 journal rows folded"}
+{"timestamp": "2026-11-18T10:30:05-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T10:40:14-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T10:50:19-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T11:01:18-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T11:01:26-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T11:10:27-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T11:15:26-08:00", "source": "consolidate", "event": "302 journal rows folded"}
+{"timestamp": "2026-11-18T11:20:35-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T11:30:52-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T11:30:59-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T11:40:45-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T11:50:50-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T12:00:50-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T12:00:57-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T12:11:00-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T12:15:57-08:00", "source": "consolidate", "event": "311 journal rows folded"}
+{"timestamp": "2026-11-18T12:21:05-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T12:30:16-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T12:30:23-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T12:40:15-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T12:50:19-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T13:00:21-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T13:00:29-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T13:10:30-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T13:15:27-08:00", "source": "consolidate", "event": "320 journal rows folded"}
+{"timestamp": "2026-11-18T13:20:35-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T13:30:35-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T13:30:43-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T13:40:45-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T13:50:50-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T14:00:50-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T14:15:58-08:00", "source": "consolidate", "event": "327 journal rows folded"}
+{"timestamp": "2026-11-18T14:30:06-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T15:00:20-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T15:15:27-08:00", "source": "consolidate", "event": "330 journal rows folded"}
+{"timestamp": "2026-11-18T15:30:35-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T16:00:52-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T16:15:58-08:00", "source": "consolidate", "event": "333 journal rows folded"}
+{"timestamp": "2026-11-18T16:30:06-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T17:00:22-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T17:15:28-08:00", "source": "consolidate", "event": "336 journal rows folded"}
+{"timestamp": "2026-11-18T17:30:36-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T18:00:51-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T18:15:59-08:00", "source": "consolidate", "event": "339 journal rows folded"}
+{"timestamp": "2026-11-18T18:30:06-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T19:00:25-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T19:00:33-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T19:10:32-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T19:15:29-08:00", "source": "consolidate", "event": "344 journal rows folded"}
+{"timestamp": "2026-11-18T19:20:37-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T19:30:37-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T19:30:45-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T19:40:48-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T19:50:53-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T20:00:52-08:00", "source": "alert", "event": "0 new"}
+{"timestamp": "2026-11-18T20:01:00-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T20:10:56-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T20:15:59-08:00", "source": "consolidate", "event": "353 journal rows folded"}
+{"timestamp": "2026-11-18T20:21:01-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}
+{"timestamp": "2026-11-18T20:30:07-08:00", "source": "alert", "event": "1 new"}
+{"timestamp": "2026-11-18T20:30:09-08:00", "source": "health", "event": "Health: OpenAI cached success; Ollama ok."}

@@ -1,10 +1,22 @@
 # Lumen
 
-Lumen is a proactive personal assistant for CSCI 599 Assignment 3 (Agentic AI, Fall 2026). It runs on Hermes, delivers a daily study briefing on Telegram, Discord, and Slack, and routes each task to OpenAI `gpt-6.1-sol` or to a local Gemma 4 model.
+Lumen is a proactive personal assistant for CSCI 599 Assignment 3 (Agentic AI, Fall 2026). It runs Hermes Agent 0.20.5 on a Cloud Run instance, keeps its home on a Cloud Storage bucket, and routes each task to OpenAI `gpt-6.1-sol` or to local Ollama `gemma4:e2b`.
 
 The assistant's user is **Maya Ortiz**, a fictional graduate student in Los Angeles. Mail, calendar, teammates, and deadlines are synthetic test data on accounts created only for this course.
 
-Planning is in [plan.md](plan.md). Conventions for coding agents are in [AGENTS.md](AGENTS.md). The four skills have been run against the live calendar and mailbox. Cloud deployment has not started.
+The graded 48-hour window ran from 15 November 2026, 17:37:53 America/Los_Angeles through 17 November 2026, 17:37:53 America/Los_Angeles. The instance was already running when the window opened, and it was not restarted to start the clock. It is still running for grading.
+
+| | |
+|---|---|
+| Project | `agenticaithree` |
+| Region | `us-west1` |
+| Instance | `lumen` |
+| URL | https://lumen-986080954772.us-west1.run.app |
+| Hermes home | `gs://lumen-home-agenticaithree`, mounted at `/hermes` |
+| Cloud model | OpenAI API, `gpt-6.1-sol` |
+| Local model | Ollama `gemma4:e2b` on this PC, reached through Tailscale |
+
+Planning is in [plan.md](plan.md). The version log is [versions.md](versions.md). Conventions for coding agents are in [AGENTS.md](AGENTS.md).
 
 ## What it does
 
@@ -14,7 +26,7 @@ On a schedule, in `America/Los_Angeles`:
 - **21:00** end-of-day recap: what ran, what is waiting for a decision, what is early tomorrow
 - **every 30 minutes** alerts: a meeting inside 30 minutes, a deadline inside 3 days, or flagged mail unanswered for more than 24 hours
 
-On request in Telegram: read the calendar, summarize unread mail, draft a reply, search the web, and suggest a study block before a deadline.
+On request in Telegram, Discord, and Slack: read the calendar, summarize unread mail, draft a reply, search the web, and suggest a study block before a deadline. The three chats share one Hermes home. A Discord channel message is answered inside a thread after the Lumen app is mentioned.
 
 Sending email requires an explicit `APPROVE <draft-id>` from the owner, and the recipient must be on an allowlist. Scheduled jobs create drafts and notifications. They do not send.
 
@@ -47,24 +59,29 @@ Cloud Run Instance (Hermes, Docker, non-root)
 | Search | Brave Search API (DuckDuckGo if no Brave key) |
 | Extra 10% | Three chats at once (Telegram, Discord, Slack) with shared memory |
 
-Routing is task-based. Short and private tasks go to Gemma when the laptop is reachable. Briefings, drafts, and planning go to `gpt-6.1-sol`. A flag file forces the local model so a rate-limit fallback can be demonstrated without burning OpenAI quota. Every decision is logged with the reason.
+Routing is task-based. A short question, including arithmetic such as "What is 12 times 9?", goes to Gemma with reason `simple` when the laptop is reachable. A message with a privacy word (`confidential`, `private`, `personal`, `sensitive`, `password`, `bank`, `medical`) goes to Gemma with reason `privacy`. Explanations, calendar, mail, and planning go to `gpt-6.1-sol` with reason `reasoning`. When Gemma is down, short and private tasks are answered by `gpt-6.1-sol` and the log reason is `local_unavailable`. They are sent to the cloud model. A flag file forces the local model so a rate-limit fallback can be demonstrated without burning OpenAI quota. Every decision is logged with the reason, the route (`local`, `cloud`, or `held`), and the model. The log line does not include the message text.
 
 ## Repository map
 
 | Path | Purpose |
 |---|---|
 | `plan.md` | Build plan, rubric mapping, phases, demo script |
+| `versions.md` | Pinned versions and the recorded checks, including the 48-hour window |
 | `AGENTS.md` | Rules for coding agents changing this repo |
-| `router/` | Hybrid router and tests |
-| `skills/` | Calendar, email, web search, Deadline Desk |
-| `hermes/` | `SOUL.md`, profile, cron definitions |
-| `deploy/` | Dockerfile, entrypoint, Cloud Run commands |
-| `synthetic/` | Fictional persona, deadlines, fixtures |
-| `security/` | Threat model, approval notes, injection tests |
-| `reports/` | Performance comparison and 48-hour evidence notes |
+| `router/` | Hybrid router: classify, execute, and the OpenAI-compatible bridge |
+| `skills/` | Calendar, email, web search, and Deadline Desk |
+| `cron/` | Briefing, recap, alerts, memory consolidate, and health |
+| `lib/` | Send gate, calendar feed, deadlines, and untrusted search snippets |
+| `hermes/` | `SOUL.md`, `USER.md`, and `MEMORY.md` for Maya Ortiz |
+| `deploy/` | Dockerfile, entrypoint, bucket mount, grader chat, and the model proxy |
+| `synthetic/` | Fictional persona, deadlines, and fixtures |
+| `security/` | Threat model and the three injection tests |
+| `reports/PERFORMANCE.md` | Cloud versus Gemma timing, quality, and token cost |
+| `evidence/48h/` | Logs and bucket files from the graded window |
 | `PROCESS_LOG.md` | Required account of AI-assisted development |
+| `tests/` | Unit tests for the gate, router, calendar, and grader chat |
 
-Those directories are created as each phase in `plan.md` lands. Course PDFs in this folder stay as reference and are not part of the runtime.
+Course PDFs stay outside this tree and are not part of the runtime.
 
 ## Prerequisites
 
@@ -83,15 +100,7 @@ Paste local secrets into `.env` (gitignored). `.env.example` lists the same name
 
 ## Run outline
 
-Exact commands will match the pinned Hermes release and will be filled in during Phase 1. The intended flow:
-
-1. Install Hermes in WSL2 and configure `gpt-6.1-sol` as the primary model.
-2. Connect Telegram and complete one round trip.
-3. Enable calendar, email, search, and Deadline Desk against the temporary accounts.
-4. Run the router tests, then one live OpenAI call and one live Ollama call.
-5. Build the container, deploy a Cloud Run **instance**, mount the memory bucket, and attach Tailscale.
-6. Confirm both models from the deployed instance, then start cron.
-7. Dry-run for several hours, then collect the 48-hour operation logs.
+Hermes is the native Windows install used to build the image. The instance is a Cloud Run **instance**, not a Cloud Run service. `deploy/prepare_cloud.py` creates the Artifact Registry repository, the bucket, and the Secret Manager entries. `deploy/ship.py` builds the image and deploys `lumen` with the bucket mounted at `/hermes`. `deploy/install_cloud_jobs.py` registers the five schedules. The recorded results are in `versions.md`.
 
 ### Rate-limit simulation
 
@@ -111,6 +120,22 @@ python scripts/simulate_rate_limit.py off
 ```
 
 `SIMULATE_RATE_LIMIT=1` does the same thing as the flag file `router/FORCE_LOCAL`. On the deployed instance that file lives in the Hermes home. Creating or removing it does not call OpenAI. With the flag gone, the next briefing goes back to `gpt-6.1-sol`.
+
+### Grader web chat
+
+The Cloud Run URL opens a chat page. Hermes listens on `127.0.0.1:8081`. `deploy/web_ui.py` listens on port 8080, serves that page, and forwards `/health` and `/v1/*` to Hermes. The grader pastes `API_SERVER_KEY` into the page. That key is the Secret Manager secret `lumen-gateway-key`. Put the key in the Brightspace comments. It is not in this repository.
+
+The page has no approval buttons. A send, or any shell command Hermes would stop for approval, is refused in this chat with a note to approve it from Telegram, Discord, or Slack. Those apps still show the approval.
+
+### Routing log
+
+Each decision is one JSON line on the instance stdout, so Cloud Logging stores it as `jsonPayload`. From a machine logged into the project:
+
+```
+gcloud logging read "jsonPayload.component=\"lumen-router\"" --project=PROJECT_ID --freshness=30m --order=desc --limit=30 --format="table(timestamp.date('%H:%M:%S'),jsonPayload.target,jsonPayload.reason,jsonPayload.model_answered,jsonPayload.success)"
+```
+
+Replace `PROJECT_ID` with the Cloud project. The four video prompts land as `simple` / local, `reasoning` / cloud, `local_unavailable` / cloud while Ollama is quit, and `privacy` / local once Ollama is back.
 
 ### Scheduled jobs
 
@@ -134,13 +159,59 @@ All five use `America/Los_Angeles`. None of them can send email. Only the memory
 - Email and search text are treated as untrusted data.
 - Ollama is bound to localhost and reached through Tailscale.
 
-Details and the five-risk threat model are specified in `plan.md` and will be written up under `security/`.
+The threat model is `security/THREAT_MODEL.md`. The three injection results are `security/injection-tests.md`. The model comparison is `reports/PERFORMANCE.md`.
 
 ## Submission
 
-Course deliverable: `firstname_lastname_a3.zip` plus a 5–7 minute demo `Assignment3-CSCI599-<USCusername>.mp4`.
+The course zip is `aadit_kshirsagar_a3.zip`. Inside it, every path below starts with `aadit_kshirsagar_a3/`. The real `.env`, keys, `.git`, and the local `var/` log are not in the archive. `.env.example` has the same names with empty values. The gateway key, the test Gmail password, and the backup codes go in the Brightspace comments.
 
-The video shows the Windows Product ID, the morning briefing, a live Telegram request, both models answering, one proactive alert, and the end-of-day recap. Gateway credentials go in the Brightspace comments, not in this repository.
+The demo recording is in the zip as `Assignment3-CSCI599-arkshirs.mp4`. It shows the morning briefing, a live messaging request, both models answering, one proactive alert, and the end-of-day recap.
+
+### 1. Source code
+
+| What the assignment asks for | Where it is |
+|---|---|
+| Platform configuration | `hermes/SOUL.md`, `hermes/USER.md`, `deploy/Dockerfile`, `deploy/entrypoint.sh`, `.env.example` |
+| Skills created for this agent | `skills/calendar/`, `skills/email/`, `skills/web-search/`, `skills/deadline-desk/` |
+| Hybrid routing | `router/classify.py`, `router/router.py`, `router/execute.py`, `router/bridge.py`, `deploy/openai_proxy.py` |
+| Scheduling | `cron/logic.py`, `cron/cli.py`, `cron/install_hermes.py`, `deploy/install_cloud_jobs.py` |
+| Container and deployment | `deploy/Dockerfile`, `deploy/entrypoint.sh`, `deploy/prepare_cloud.py`, `deploy/ship.py`, `deploy/web_ui.py` |
+
+### 2. Deployment evidence
+
+The HTTPS URL is in the table at the top of this file. The 48-hour record is `evidence/48h/`. `evidence/48h/README.txt` states the window bounds and the job ids.
+
+| Evidence | File |
+|---|---|
+| Full window, not only the start and the end | `evidence/48h/journal.jsonl` |
+| Saved briefing, recap, alert, consolidate, and health text | `evidence/48h/cron-output/` |
+| Schedule and last status, copied from the bucket | `evidence/48h/jobs.json` |
+| Window marker, restart fact, and memory that stayed on the bucket | `evidence/48h/window-start.txt`, `evidence/48h/restart-fact.txt`, `evidence/48h/MEMORY.md` |
+| How the bucket is mounted | `deploy/ship.py` |
+| Platform log | `evidence/48h/gateway.log` |
+| Routing decisions, with no message text | `evidence/48h/router.log`, `evidence/48h/cloud-logging-router.json` |
+
+Hermes keeps the latest 50 output files per job. The alert and health markdown files therefore start late. The earlier hours of those jobs are the matching lines in `journal.jsonl`. The router files are the setup calls before the window and the demo calls after it. No `lumen-router` line was written during the quiet hours in between.
+
+### 3. Security audit
+
+`security/THREAT_MODEL.md` lists six risks, the mitigation for each, and the risk that remains. Container isolation is the non-root image in `deploy/Dockerfile` and the boot report in `deploy/isolation-report.sh`. Credential storage, the send gate, and prompt-injection handling are the other measures. `security/injection-tests.md` records three attacks and a Pass for each.
+
+### 4. Performance comparison
+
+`reports/PERFORMANCE.md` compares `gpt-6.1-sol` and `gemma4:e2b` on a short summary, a morning briefing, a private rewrite, and a forced-local reply. Each row has the route, the model that answered, the time, the token cost, and a note on the answer.
+
+### 5. Personalization profile
+
+`hermes/SOUL.md` is the assistant. `hermes/USER.md` is Maya Ortiz. `hermes/MEMORY.md` is the synthetic memory file. Nothing in those files is a real personal, financial, or USC account detail.
+
+### 6. Process log
+
+`PROCESS_LOG.md` has the five required sections: tools used, the development narrative, code attribution, how the work was checked, and what was learned.
+
+### 7. Demo video
+
+`Assignment3-CSCI599-arkshirs.mp4` sits next to this README inside the zip.
 
 ## Course references (local)
 

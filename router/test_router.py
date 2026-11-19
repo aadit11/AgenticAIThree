@@ -129,15 +129,20 @@ class ExecuteTests(unittest.TestCase):
         self.assertEqual(
             set(row),
             {
+                "component",
                 "timestamp",
                 "task_type",
                 "reason",
+                "target",
                 "model_requested",
                 "model_answered",
                 "success",
                 "latency_ms",
             },
         )
+        self.assertEqual(row["component"], "lumen-router")
+        self.assertEqual(row["target"], "local")
+        self.assertNotIn("ping", json.dumps(row))
 
     def _run(self, task, flag_path=None, env=None, log_path=None):
         self.called = set()

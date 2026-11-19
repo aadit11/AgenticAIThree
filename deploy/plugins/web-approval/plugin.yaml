@@ -1,0 +1,6 @@
+name: web-approval
+version: "0.1.0"
+description: "Block approval-gated tools when the chat comes from the grader web UI. Messaging apps still show approval."
+hooks:
+  - pre_llm_call
+  - pre_tool_call

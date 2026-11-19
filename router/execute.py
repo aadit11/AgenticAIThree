@@ -59,12 +59,29 @@ def apply_simulation(task: Task, env: dict[str, str] | None = None, flag_path: P
     return task
 
 
+def route_target(reason: str, model: str) -> str:
+    """local, cloud, or held. The log never includes the message text."""
+    if reason == "held":
+        return "held"
+    if reason in {
+        "simple",
+        "privacy",
+        "simulated_rate_limit",
+        "cloud_rate_limit",
+        "cloud_model_unavailable",
+    } or model.startswith("gemma"):
+        return "local"
+    return "cloud"
+
+
 def log_line(outcome: Outcome) -> str:
     return json.dumps(
         {
+            "component": "lumen-router",
             "timestamp": outcome.timestamp,
             "task_type": outcome.task_type,
             "reason": outcome.reason,
+            "target": route_target(outcome.reason, outcome.model_answered or outcome.model_requested),
             "model_requested": outcome.model_requested,
             "model_answered": outcome.model_answered,
             "success": outcome.success,

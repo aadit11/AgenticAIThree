@@ -1,0 +1,1210 @@
+2026-11-15 06:49:26,201 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 06:49:26,220 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 06:49:26,226 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 06:49:26,226 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 06:49:27,601 INFO gateway.run: Connecting to telegram...
+2026-11-15 06:49:27,752 INFO gateway.run: Connecting to discord...
+2026-11-15 06:49:27,907 INFO gateway.run: Connecting to slack...
+2026-11-15 06:49:28,049 INFO gateway.run: Connecting to api_server...
+2026-11-15 06:49:28,203 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-11-15 06:49:28,512 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 06:49:35,117 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 77 skill(s) via autocomplete
+2026-11-15 06:49:35,273 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 06:49:35,510 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP discovery failed after 5s; using seed IPv4 Telegram API IPs so a blackholed IPv6 hostname path cannot hang initialize() (#87015): 
+2026-11-15 06:49:35,510 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback IPs active: 149.154.166.110, 149.154.167.220
+2026-11-15 06:49:35,604 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 06:49:35,764 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 06:49:35,923 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 06:49:35,930 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 06:49:36,254 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-11-15 06:49:38,734 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 06:49:47,094 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-11-15 06:49:47,094 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 06:49:47,281 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 06:49:47,455 INFO gateway.run: ✓ telegram connected
+2026-11-15 06:49:47,619 INFO gateway.run: ✓ discord connected
+2026-11-15 06:49:47,771 INFO gateway.run: ✓ slack connected
+2026-11-15 06:49:47,923 INFO gateway.run: ✓ api_server connected
+2026-11-15 06:49:48,071 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 06:49:48,523 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 06:49:48,807 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 06:49:49,091 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 06:49:49,383 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 06:49:49,383 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 06:49:50,022 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 06:49:50,136 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 06:49:50,241 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 06:49:50,241 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 06:49:55,242 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 06:50:09,231 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='169.254.169.126' peer_ip='169.254.169.126' forwarded_for='64.136.145.71' method='GET' path='/v1/models' user_agent='curl/8.22.0'
+2026-11-15 06:50:23,316 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='169.254.169.126' peer_ip='169.254.169.126' forwarded_for='64.136.145.71' method='GET' path='/v1/models' user_agent='Python-urllib/3.9'
+2026-11-15 06:59:25,307 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 06:59:25,307 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 06:59:25,700 INFO gateway.run: Stopping gateway...
+2026-11-15 06:59:25,826 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 06:59:25,843 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 06:59:26,018 INFO gateway.run: Shutdown phase: drain done at +0.32s (drain took 0.17s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 06:59:26,596 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 06:59:26,596 INFO gateway.run: ✓ telegram disconnected (0.58s)
+2026-11-15 06:59:26,600 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 06:59:26,600 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 06:59:26,601 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 06:59:26,601 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 06:59:26,753 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 06:59:26,753 INFO gateway.run: ✓ api_server disconnected (0.15s)
+2026-11-15 06:59:26,753 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.05s
+2026-11-15 06:59:27,124 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.42s
+2026-11-15 06:59:27,127 INFO gateway.run: Shutdown phase: SessionDB close done at +1.43s
+2026-11-15 06:59:27,265 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 06:59:27,415 INFO gateway.run: Gateway stopped (total teardown 1.72s)
+2026-11-15 06:59:27,416 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 06:59:27,516 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 07:03:46,271 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 07:03:46,273 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 07:03:46,278 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 07:03:46,279 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 07:03:46,520 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 07:03:47,048 INFO gateway.run: Connecting to telegram...
+2026-11-15 07:03:47,186 INFO gateway.run: Connecting to discord...
+2026-11-15 07:03:47,334 INFO gateway.run: Connecting to slack...
+2026-11-15 07:03:47,492 INFO gateway.run: Connecting to api_server...
+2026-11-15 07:03:47,632 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-11-15 07:03:48,285 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 07:03:53,669 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 77 skill(s) via autocomplete
+2026-11-15 07:03:53,825 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 07:03:54,131 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP discovery failed after 5s; using seed IPv4 Telegram API IPs so a blackholed IPv6 hostname path cannot hang initialize() (#87015): 
+2026-11-15 07:03:54,131 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback IPs active: 149.154.166.110, 149.154.167.220
+2026-11-15 07:03:54,196 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 07:03:54,323 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 07:03:54,456 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 07:03:54,462 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 07:03:54,794 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-11-15 07:03:57,521 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 07:04:05,588 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-11-15 07:04:05,589 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 07:04:05,753 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 07:04:05,935 INFO gateway.run: ✓ telegram connected
+2026-11-15 07:04:06,070 INFO gateway.run: ✓ discord connected
+2026-11-15 07:04:06,221 INFO gateway.run: ✓ slack connected
+2026-11-15 07:04:06,370 INFO gateway.run: ✓ api_server connected
+2026-11-15 07:04:06,512 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 07:04:06,889 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 07:04:07,260 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 07:04:07,568 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 07:04:07,870 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 07:04:07,870 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 07:04:08,026 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 07:04:08,079 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 07:04:08,080 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 07:04:08,081 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 07:04:13,081 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 07:07:15,485 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 07:07:15,485 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 07:07:15,714 INFO gateway.run: Stopping gateway...
+2026-11-15 07:07:15,840 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 07:07:15,857 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 07:07:16,025 INFO gateway.run: Shutdown phase: drain done at +0.31s (drain took 0.17s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 07:07:16,617 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 07:07:16,617 INFO gateway.run: ✓ telegram disconnected (0.59s)
+2026-11-15 07:07:16,619 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 07:07:16,619 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 07:07:16,620 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 07:07:16,620 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 07:07:16,749 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 07:07:16,750 INFO gateway.run: ✓ api_server disconnected (0.13s)
+2026-11-15 07:07:16,750 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.04s
+2026-11-15 07:07:17,004 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.29s
+2026-11-15 07:07:17,006 INFO gateway.run: Shutdown phase: SessionDB close done at +1.29s
+2026-11-15 07:07:17,131 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 07:07:17,279 INFO gateway.run: Gateway stopped (total teardown 1.57s)
+2026-11-15 07:07:17,280 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 07:07:17,381 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 07:07:55,291 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 07:07:55,292 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 07:07:55,297 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 07:07:55,297 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 07:07:55,569 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 07:07:56,063 INFO gateway.run: Connecting to telegram...
+2026-11-15 07:07:56,251 INFO gateway.run: Connecting to discord...
+2026-11-15 07:07:56,451 INFO gateway.run: Connecting to slack...
+2026-11-15 07:07:56,602 INFO gateway.run: Connecting to api_server...
+2026-11-15 07:07:56,790 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 07:07:57,061 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 07:07:58,662 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 07:08:04,338 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 77 skill(s) via autocomplete
+2026-11-15 07:08:04,468 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 07:08:04,726 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 07:08:04,841 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 07:08:04,847 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 07:08:07,472 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 07:08:16,209 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 07:08:16,368 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 07:08:16,543 INFO gateway.run: ✓ telegram connected
+2026-11-15 07:08:16,681 INFO gateway.run: ✓ discord connected
+2026-11-15 07:08:16,824 INFO gateway.run: ✓ slack connected
+2026-11-15 07:08:16,985 INFO gateway.run: ✓ api_server connected
+2026-11-15 07:08:17,131 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 07:08:17,517 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 07:08:17,907 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 07:08:18,205 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 07:08:18,490 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 07:08:18,490 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 07:08:18,668 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 07:08:18,716 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 07:08:18,717 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 07:08:18,717 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 07:08:23,718 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 07:09:58,417 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-15 07:10:23,030 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-11-15 07:10:33,471 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 2)
+2026-11-15 07:18:07,630 WARNING hermes_plugins.discord_platform.adapter: [Discord] Slash command sync timed out — Discord rate-limit bucket may be saturated; will retry on next reconnect
+2026-11-15 21:30:34,136 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 21:30:34,136 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 21:30:34,413 INFO gateway.run: Stopping gateway...
+2026-11-15 21:30:34,531 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 21:30:34,544 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.13s
+2026-11-15 21:30:34,779 INFO gateway.run: Shutdown phase: drain done at +0.37s (drain took 0.23s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 21:30:35,498 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 21:30:35,499 INFO gateway.run: ✓ telegram disconnected (0.72s)
+2026-11-15 21:30:35,499 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 21:30:35,499 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 21:30:35,500 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 21:30:35,500 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 21:30:35,662 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 21:30:35,662 INFO gateway.run: ✓ api_server disconnected (0.16s)
+2026-11-15 21:30:35,662 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.25s
+2026-11-15 21:30:35,887 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.47s
+2026-11-15 21:30:35,890 INFO gateway.run: Shutdown phase: SessionDB close done at +1.48s
+2026-11-15 21:30:36,077 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 21:30:36,234 INFO gateway.run: Gateway stopped (total teardown 1.82s)
+2026-11-15 21:30:36,235 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 21:30:36,335 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 21:31:33,700 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 21:31:33,703 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 21:31:33,712 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 21:31:33,713 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 21:31:33,943 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 21:31:34,558 INFO gateway.run: Connecting to telegram...
+2026-11-15 21:31:34,737 INFO gateway.run: Connecting to discord...
+2026-11-15 21:31:34,894 INFO gateway.run: Connecting to slack...
+2026-11-15 21:31:35,042 INFO gateway.run: Connecting to api_server...
+2026-11-15 21:31:35,219 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 21:31:35,635 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 21:31:36,155 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 21:31:44,736 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 77 skill(s) via autocomplete
+2026-11-15 21:31:44,902 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 21:31:45,180 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 21:31:45,300 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 21:31:45,309 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 21:31:48,714 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 21:31:56,451 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 21:31:56,638 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 21:31:56,821 INFO gateway.run: ✓ telegram connected
+2026-11-15 21:31:56,995 INFO gateway.run: ✓ discord connected
+2026-11-15 21:31:57,152 INFO gateway.run: ✓ slack connected
+2026-11-15 21:31:57,314 INFO gateway.run: ✓ api_server connected
+2026-11-15 21:31:57,463 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 21:31:57,898 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 21:31:58,414 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 21:31:58,693 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 21:31:59,009 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 21:31:59,009 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 21:31:59,080 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 21:31:59,141 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 21:31:59,142 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 21:31:59,142 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 21:32:04,143 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 21:32:04,157 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[36]
+2026-11-15 21:36:51,561 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 21:36:51,561 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 21:36:51,855 INFO gateway.run: Stopping gateway...
+2026-11-15 21:36:51,980 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 21:36:51,998 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 21:36:52,194 INFO gateway.run: Shutdown phase: drain done at +0.34s (drain took 0.20s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 21:36:55,826 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 21:36:55,826 INFO gateway.run: ✓ telegram disconnected (3.63s)
+2026-11-15 21:36:55,828 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 21:36:55,828 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 21:36:55,829 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 21:36:55,829 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 21:36:55,980 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 21:36:55,981 INFO gateway.run: ✓ api_server disconnected (0.15s)
+2026-11-15 21:36:55,981 INFO gateway.run: Shutdown phase: all adapters disconnected at +4.13s
+2026-11-15 21:36:56,250 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +4.39s
+2026-11-15 21:36:56,253 INFO gateway.run: Shutdown phase: SessionDB close done at +4.40s
+2026-11-15 21:36:56,404 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 21:36:56,557 INFO gateway.run: Gateway stopped (total teardown 4.70s)
+2026-11-15 21:36:56,557 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 21:36:56,658 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 21:37:43,376 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 21:37:43,377 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 21:37:43,383 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 21:37:43,383 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 21:37:43,613 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 21:37:44,234 INFO gateway.run: Connecting to telegram...
+2026-11-15 21:37:44,433 INFO gateway.run: Connecting to discord...
+2026-11-15 21:37:44,593 INFO gateway.run: Connecting to slack...
+2026-11-15 21:37:44,748 INFO gateway.run: Connecting to api_server...
+2026-11-15 21:37:44,919 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 21:37:45,352 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 21:37:46,554 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 21:37:54,443 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 77 skill(s) via autocomplete
+2026-11-15 21:37:54,536 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 21:37:54,835 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 21:37:54,954 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 21:37:54,962 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 21:37:57,758 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 21:38:06,301 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 21:38:06,537 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 21:38:06,731 INFO gateway.run: ✓ telegram connected
+2026-11-15 21:38:06,882 INFO gateway.run: ✓ discord connected
+2026-11-15 21:38:07,049 INFO gateway.run: ✓ slack connected
+2026-11-15 21:38:07,210 INFO gateway.run: ✓ api_server connected
+2026-11-15 21:38:07,369 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 21:38:07,783 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 21:38:08,152 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 21:38:08,454 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 21:38:08,745 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 21:38:08,745 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 21:38:08,941 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 21:38:08,995 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 21:38:08,997 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 21:38:08,997 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 21:38:13,999 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 21:38:14,014 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[35]
+2026-11-15 21:40:00,411 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 21:40:00,411 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.03 parent_cmdline='(unknown)'
+2026-11-15 21:40:00,678 INFO gateway.run: Stopping gateway...
+2026-11-15 21:40:00,804 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 21:40:00,816 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 21:40:00,973 INFO gateway.run: Shutdown phase: drain done at +0.29s (drain took 0.16s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 21:40:01,569 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 21:40:01,569 INFO gateway.run: ✓ telegram disconnected (0.60s)
+2026-11-15 21:40:01,570 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 21:40:01,570 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 21:40:01,571 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 21:40:01,571 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 21:40:01,728 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 21:40:01,728 INFO gateway.run: ✓ api_server disconnected (0.16s)
+2026-11-15 21:40:01,728 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.05s
+2026-11-15 21:40:02,002 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.32s
+2026-11-15 21:40:02,004 INFO gateway.run: Shutdown phase: SessionDB close done at +1.33s
+2026-11-15 21:40:02,136 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 21:40:02,290 INFO gateway.run: Gateway stopped (total teardown 1.61s)
+2026-11-15 21:40:02,291 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 21:40:02,391 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 21:40:54,396 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 21:40:54,397 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 21:40:54,406 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 21:40:54,406 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 21:40:54,665 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 21:40:55,222 INFO gateway.run: Connecting to telegram...
+2026-11-15 21:40:55,390 INFO gateway.run: Connecting to discord...
+2026-11-15 21:40:55,561 INFO gateway.run: Connecting to slack...
+2026-11-15 21:40:55,716 INFO gateway.run: Connecting to api_server...
+2026-11-15 21:40:55,927 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 21:40:56,252 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 21:40:57,689 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 21:41:04,432 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 77 skill(s) via autocomplete
+2026-11-15 21:41:04,605 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 21:41:04,950 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 21:41:05,069 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 21:41:05,077 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 21:41:07,876 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 21:41:16,178 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 21:41:16,407 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 21:41:16,585 INFO gateway.run: ✓ telegram connected
+2026-11-15 21:41:16,767 INFO gateway.run: ✓ discord connected
+2026-11-15 21:41:16,957 INFO gateway.run: ✓ slack connected
+2026-11-15 21:41:17,130 INFO gateway.run: ✓ api_server connected
+2026-11-15 21:41:17,275 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 21:41:17,700 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 21:41:18,011 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 21:41:18,286 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 21:41:18,563 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 21:41:18,563 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 21:41:18,852 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 21:41:18,919 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 21:41:18,926 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 21:41:18,927 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 21:41:23,926 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 21:42:13,182 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='169.254.169.126' peer_ip='169.254.169.126' forwarded_for='64.136.145.71' method='GET' path='/v1/models' user_agent='curl/8.22.0'
+2026-11-15 21:42:37,096 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='169.254.169.126' peer_ip='169.254.169.126' forwarded_for='64.136.145.71' method='GET' path='/v1/models' user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+2026-11-15 21:51:08,055 WARNING hermes_plugins.discord_platform.adapter: [Discord] Slash command sync timed out — Discord rate-limit bucket may be saturated; will retry on next reconnect
+2026-11-15 22:00:06,127 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 22:00:06,128 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 22:00:06,442 INFO gateway.run: Stopping gateway...
+2026-11-15 22:00:06,568 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 22:00:06,582 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 22:00:06,763 INFO gateway.run: Shutdown phase: drain done at +0.32s (drain took 0.18s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 22:00:07,627 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 22:00:07,627 INFO gateway.run: ✓ telegram disconnected (0.86s)
+2026-11-15 22:00:07,628 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 22:00:07,628 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 22:00:07,629 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 22:00:07,629 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 22:00:07,793 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 22:00:07,793 INFO gateway.run: ✓ api_server disconnected (0.16s)
+2026-11-15 22:00:07,793 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.35s
+2026-11-15 22:00:08,117 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.67s
+2026-11-15 22:00:08,119 INFO gateway.run: Shutdown phase: SessionDB close done at +1.68s
+2026-11-15 22:00:08,275 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 22:00:08,444 INFO gateway.run: Gateway stopped (total teardown 2.00s)
+2026-11-15 22:00:08,445 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 22:00:08,545 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 22:01:54,587 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 22:01:54,589 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 22:01:54,596 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 22:01:54,597 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 22:01:55,427 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 22:01:58,413 INFO gateway.run: Connecting to telegram...
+2026-11-15 22:01:58,788 INFO gateway.run: Connecting to discord...
+2026-11-15 22:01:59,134 INFO gateway.run: Connecting to slack...
+2026-11-15 22:01:59,488 INFO gateway.run: Connecting to api_server...
+2026-11-15 22:01:59,788 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 22:02:01,491 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 22:02:02,192 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 22:02:07,573 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-15 22:02:08,212 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 22:02:08,712 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 22:02:08,827 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 22:02:08,834 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 22:02:13,494 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 22:02:20,588 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 22:02:21,197 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 22:02:21,907 INFO gateway.run: ✓ telegram connected
+2026-11-15 22:02:22,288 INFO gateway.run: ✓ discord connected
+2026-11-15 22:02:23,989 INFO gateway.run: ✓ slack connected
+2026-11-15 22:02:24,215 INFO gateway.run: ✓ api_server connected
+2026-11-15 22:02:24,489 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 22:02:25,588 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 22:02:25,889 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 22:02:26,188 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 22:02:26,188 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 22:02:26,889 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 22:02:28,398 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 22:02:28,888 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 22:02:28,891 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 22:02:28,891 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 22:02:33,893 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 22:02:34,013 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[62]
+2026-11-15 22:03:36,245 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[63]
+2026-11-15 22:09:13,959 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 335s
+2026-11-15 22:25:17,951 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 22:25:17,951 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 22:25:18,026 INFO gateway.run: Stopping gateway...
+2026-11-15 22:25:18,151 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 22:25:18,162 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 22:25:18,341 INFO gateway.run: Shutdown phase: drain done at +0.31s (drain took 0.18s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 22:25:19,183 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 22:25:19,183 INFO gateway.run: ✓ telegram disconnected (0.84s)
+2026-11-15 22:25:19,185 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 22:25:19,185 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 22:25:19,186 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 22:25:19,186 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 22:25:19,365 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 22:25:19,366 INFO gateway.run: ✓ api_server disconnected (0.18s)
+2026-11-15 22:25:19,366 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.34s
+2026-11-15 22:25:19,395 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.37s
+2026-11-15 22:25:19,398 INFO gateway.run: Shutdown phase: SessionDB close done at +1.37s
+2026-11-15 22:25:19,536 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 22:25:19,678 INFO gateway.run: Gateway stopped (total teardown 1.65s)
+2026-11-15 22:25:19,679 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 22:25:19,779 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 22:26:30,475 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 22:26:30,477 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 22:26:30,483 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 22:26:30,483 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 22:26:30,750 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 22:26:31,226 INFO gateway.run: Connecting to telegram...
+2026-11-15 22:26:31,372 INFO gateway.run: Connecting to discord...
+2026-11-15 22:26:31,510 INFO gateway.run: Connecting to slack...
+2026-11-15 22:26:31,656 INFO gateway.run: Connecting to api_server...
+2026-11-15 22:26:31,810 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 22:26:32,169 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 22:26:33,744 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 22:26:36,657 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-15 22:26:36,839 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 22:26:37,124 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 22:26:37,247 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 22:26:37,254 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 22:26:40,004 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 22:26:48,559 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 22:26:49,031 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 22:26:49,444 INFO gateway.run: ✓ telegram connected
+2026-11-15 22:26:49,782 INFO gateway.run: ✓ discord connected
+2026-11-15 22:26:49,943 INFO gateway.run: ✓ slack connected
+2026-11-15 22:26:50,243 INFO gateway.run: ✓ api_server connected
+2026-11-15 22:26:50,667 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 22:26:52,152 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 22:26:52,634 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 22:26:52,931 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 22:26:52,931 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 22:26:54,131 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 22:26:55,847 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 22:26:56,264 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 22:26:56,264 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 22:26:56,337 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 22:27:01,332 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 22:27:01,530 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[43]
+2026-11-15 22:27:07,760 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 126s
+2026-11-15 22:28:05,474 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[44]
+2026-11-15 22:35:56,460 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 22:35:56,460 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 22:35:56,546 INFO gateway.run: Stopping gateway...
+2026-11-15 22:35:56,873 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 22:35:56,886 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.34s
+2026-11-15 22:35:57,053 INFO gateway.run: Shutdown phase: drain done at +0.51s (drain took 0.17s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 22:36:00,659 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 22:36:00,660 INFO gateway.run: ✓ telegram disconnected (3.61s)
+2026-11-15 22:36:00,661 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 22:36:00,661 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 22:36:00,662 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 22:36:00,662 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 22:36:00,812 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 22:36:00,813 INFO gateway.run: ✓ api_server disconnected (0.15s)
+2026-11-15 22:36:00,813 INFO gateway.run: Shutdown phase: all adapters disconnected at +4.27s
+2026-11-15 22:36:00,862 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +4.32s
+2026-11-15 22:36:00,864 INFO gateway.run: Shutdown phase: SessionDB close done at +4.32s
+2026-11-15 22:36:01,024 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 22:36:01,174 INFO gateway.run: Gateway stopped (total teardown 4.63s)
+2026-11-15 22:36:01,175 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 22:36:01,275 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 22:37:05,810 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 22:37:05,810 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 22:37:05,816 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 22:37:05,816 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 22:37:06,066 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 22:37:06,612 INFO gateway.run: Connecting to telegram...
+2026-11-15 22:37:06,765 INFO gateway.run: Connecting to discord...
+2026-11-15 22:37:06,919 INFO gateway.run: Connecting to slack...
+2026-11-15 22:37:07,081 INFO gateway.run: Connecting to api_server...
+2026-11-15 22:37:07,264 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 22:37:09,665 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 22:37:10,658 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 22:37:14,180 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-15 22:37:15,067 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 22:37:15,549 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 22:37:15,670 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 22:37:15,676 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 22:37:18,425 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 22:37:26,874 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 22:37:27,035 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 22:37:27,227 INFO gateway.run: ✓ telegram connected
+2026-11-15 22:37:27,368 INFO gateway.run: ✓ discord connected
+2026-11-15 22:37:27,515 INFO gateway.run: ✓ slack connected
+2026-11-15 22:37:27,671 INFO gateway.run: ✓ api_server connected
+2026-11-15 22:37:27,808 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 22:37:28,216 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 22:37:28,807 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 22:37:29,097 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 22:37:29,369 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 22:37:29,417 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 22:37:29,473 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 22:37:29,473 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 22:37:29,492 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 22:37:29,492 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 22:37:34,474 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 22:37:34,488 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[45, 46]
+2026-11-15 22:37:38,924 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 359s
+2026-11-15 22:41:56,434 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 22:41:56,435 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.02 parent_cmdline='(unknown)'
+2026-11-15 22:41:56,634 INFO gateway.run: Stopping gateway...
+2026-11-15 22:41:56,755 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 22:41:56,763 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.13s
+2026-11-15 22:41:56,948 INFO gateway.run: Shutdown phase: drain done at +0.31s (drain took 0.18s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 22:41:57,641 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 22:41:57,641 INFO gateway.run: ✓ telegram disconnected (0.69s)
+2026-11-15 22:41:57,641 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 22:41:57,641 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 22:41:57,642 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 22:41:57,642 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 22:41:57,776 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 22:41:57,776 INFO gateway.run: ✓ api_server disconnected (0.13s)
+2026-11-15 22:41:57,776 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.14s
+2026-11-15 22:41:57,820 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.19s
+2026-11-15 22:41:57,822 INFO gateway.run: Shutdown phase: SessionDB close done at +1.19s
+2026-11-15 22:41:57,979 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 22:41:58,145 INFO gateway.run: Gateway stopped (total teardown 1.51s)
+2026-11-15 22:41:58,145 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 22:41:58,246 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 22:43:11,230 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 22:43:11,231 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 22:43:11,244 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 22:43:11,244 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 22:43:11,522 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 22:43:16,316 INFO gateway.run: Connecting to telegram...
+2026-11-15 22:43:16,913 INFO gateway.run: Connecting to discord...
+2026-11-15 22:43:17,313 INFO gateway.run: Connecting to slack...
+2026-11-15 22:43:17,812 INFO gateway.run: Connecting to api_server...
+2026-11-15 22:43:18,412 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 22:43:23,817 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 22:43:24,422 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 22:43:31,451 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-15 22:43:32,216 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 22:43:32,882 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 22:43:33,004 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 22:43:33,011 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 22:43:36,114 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 22:43:36,166 INFO hermes_plugins.discord_platform.adapter: [Discord] Skipping Discord slash command sync: Discord asked us to wait before syncing slash commands; retry in 1s
+2026-11-15 22:43:44,119 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 22:43:44,328 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 22:43:44,543 INFO gateway.run: ✓ telegram connected
+2026-11-15 22:43:44,693 INFO gateway.run: ✓ discord connected
+2026-11-15 22:43:44,869 INFO gateway.run: ✓ slack connected
+2026-11-15 22:43:45,034 INFO gateway.run: ✓ api_server connected
+2026-11-15 22:43:45,216 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 22:43:45,913 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 22:43:46,188 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 22:43:46,378 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 22:43:46,459 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 22:43:46,459 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 22:43:47,591 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 22:43:47,665 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 22:43:47,666 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 22:43:47,666 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 22:43:52,667 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 22:43:52,683 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[45, 46]
+2026-11-15 22:48:54,042 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 22:48:54,042 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.03 parent_cmdline='(unknown)'
+2026-11-15 22:48:54,357 INFO gateway.run: Stopping gateway...
+2026-11-15 22:48:54,479 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 22:48:54,495 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.14s
+2026-11-15 22:48:54,670 INFO gateway.run: Shutdown phase: drain done at +0.31s (drain took 0.17s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 22:48:55,278 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 22:48:55,278 INFO gateway.run: ✓ telegram disconnected (0.61s)
+2026-11-15 22:48:55,279 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 22:48:55,279 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 22:48:55,280 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 22:48:55,280 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 22:48:55,430 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 22:48:55,430 INFO gateway.run: ✓ api_server disconnected (0.15s)
+2026-11-15 22:48:55,430 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.07s
+2026-11-15 22:48:55,472 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.12s
+2026-11-15 22:48:55,475 INFO gateway.run: Shutdown phase: SessionDB close done at +1.12s
+2026-11-15 22:48:55,605 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 22:48:55,767 INFO gateway.run: Gateway stopped (total teardown 1.41s)
+2026-11-15 22:48:55,768 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 22:48:55,869 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 22:50:04,932 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 22:50:04,933 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 22:50:04,940 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 22:50:04,941 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 22:50:05,201 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 22:50:05,746 INFO gateway.run: Connecting to telegram...
+2026-11-15 22:50:05,907 INFO gateway.run: Connecting to discord...
+2026-11-15 22:50:06,076 INFO gateway.run: Connecting to slack...
+2026-11-15 22:50:06,249 INFO gateway.run: Connecting to api_server...
+2026-11-15 22:50:06,409 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 22:50:06,767 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 22:50:07,309 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 22:50:10,744 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-15 22:50:11,202 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 22:50:11,565 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 22:50:11,684 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 22:50:11,692 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 22:50:14,450 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 22:50:22,776 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 22:50:22,944 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 22:50:23,106 INFO gateway.run: ✓ telegram connected
+2026-11-15 22:50:23,257 INFO gateway.run: ✓ discord connected
+2026-11-15 22:50:23,459 INFO gateway.run: ✓ slack connected
+2026-11-15 22:50:23,599 INFO gateway.run: ✓ api_server connected
+2026-11-15 22:50:23,766 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 22:50:24,216 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 22:50:24,536 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 22:50:24,808 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 22:50:25,082 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 22:50:25,082 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 22:50:25,378 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 22:50:25,424 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 22:50:25,424 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 22:50:25,425 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 22:50:30,426 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 22:50:30,439 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[45, 46]
+2026-11-15 22:50:54,417 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 427s
+2026-11-15 23:43:48,968 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-15 23:43:48,968 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-15 23:43:49,062 INFO gateway.run: Stopping gateway...
+2026-11-15 23:43:49,182 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-15 23:43:49,194 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.13s
+2026-11-15 23:43:49,359 INFO gateway.run: Shutdown phase: drain done at +0.30s (drain took 0.17s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-15 23:43:49,998 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-15 23:43:49,998 INFO gateway.run: ✓ telegram disconnected (0.64s)
+2026-11-15 23:43:49,999 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-15 23:43:49,999 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-15 23:43:49,999 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-15 23:43:49,999 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-15 23:43:50,140 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-15 23:43:50,140 INFO gateway.run: ✓ api_server disconnected (0.14s)
+2026-11-15 23:43:50,140 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.08s
+2026-11-15 23:43:50,175 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.11s
+2026-11-15 23:43:50,177 INFO gateway.run: Shutdown phase: SessionDB close done at +1.11s
+2026-11-15 23:43:50,339 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-15 23:43:50,474 INFO gateway.run: Gateway stopped (total teardown 1.41s)
+2026-11-15 23:43:50,474 INFO gateway.run: Gateway housekeeping stopped
+2026-11-15 23:43:50,574 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-15 23:44:51,391 INFO gateway.run: Starting Hermes Gateway...
+2026-11-15 23:44:51,391 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-15 23:44:51,397 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-15 23:44:51,397 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-15 23:44:51,658 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-15 23:44:52,141 INFO gateway.run: Connecting to telegram...
+2026-11-15 23:44:52,314 INFO gateway.run: Connecting to discord...
+2026-11-15 23:44:52,492 INFO gateway.run: Connecting to slack...
+2026-11-15 23:44:52,767 INFO gateway.run: Connecting to api_server...
+2026-11-15 23:44:53,386 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-15 23:44:54,390 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-15 23:44:54,953 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-15 23:44:58,551 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-15 23:44:58,672 WARNING gateway.platforms.api_server: [Api_Server] API server is network-accessible (0.0.0.0) AND the terminal backend is 'local' (unsandboxed). Agent work dispatched through this endpoint runs as the host user with full terminal/file access. Strongly consider a sandboxed backend (terminal.backend: docker) and firewalling this port to trusted networks only.
+2026-11-15 23:44:59,041 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://0.0.0.0:8080 (model: hermes-agent)
+2026-11-15 23:44:59,157 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-15 23:44:59,163 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-15 23:45:02,037 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-15 23:45:10,234 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-15 23:45:10,403 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-15 23:45:10,573 INFO gateway.run: ✓ telegram connected
+2026-11-15 23:45:10,733 INFO gateway.run: ✓ discord connected
+2026-11-15 23:45:10,873 INFO gateway.run: ✓ slack connected
+2026-11-15 23:45:11,007 INFO gateway.run: ✓ api_server connected
+2026-11-15 23:45:11,146 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-15 23:45:11,567 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-15 23:45:11,912 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-15 23:45:12,189 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-15 23:45:12,464 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-15 23:45:12,464 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-15 23:45:12,738 INFO gateway.run: Press Ctrl+C to stop
+2026-11-15 23:45:12,788 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-15 23:45:12,790 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-15 23:45:12,790 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-15 23:45:17,791 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-15 23:45:17,805 INFO gateway.run: kanban dispatcher: reaped 4 zombie worker(s), pids=[45, 46, 47, 48]
+2026-11-15 23:46:16,567 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 129s
+2026-11-15 23:46:20,985 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[49]
+2026-11-16 00:32:34,786 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-16 00:32:34,787 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=no parent_pid=? parent_name=? loadavg_1m=0.00 parent_cmdline='(unknown)'
+2026-11-16 00:32:34,986 INFO gateway.run: Stopping gateway...
+2026-11-16 00:32:35,103 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-16 00:32:35,120 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.13s
+2026-11-16 00:32:35,307 INFO gateway.run: Shutdown phase: drain done at +0.32s (drain took 0.19s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-16 00:32:35,918 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-16 00:32:35,918 INFO gateway.run: ✓ telegram disconnected (0.61s)
+2026-11-16 00:32:35,919 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-16 00:32:35,919 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-16 00:32:35,919 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-16 00:32:35,920 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-16 00:32:36,046 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-16 00:32:36,046 INFO gateway.run: ✓ api_server disconnected (0.13s)
+2026-11-16 00:32:36,046 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.06s
+2026-11-16 00:32:36,083 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.10s
+2026-11-16 00:32:36,085 INFO gateway.run: Shutdown phase: SessionDB close done at +1.10s
+2026-11-16 00:32:36,217 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-16 00:32:36,338 INFO gateway.run: Gateway stopped (total teardown 1.35s)
+2026-11-16 00:32:36,339 INFO gateway.run: Gateway housekeeping stopped
+2026-11-16 00:32:36,439 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-16 00:33:57,072 INFO gateway.run: Starting Hermes Gateway...
+2026-11-16 00:33:57,073 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-16 00:33:57,078 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-16 00:33:57,078 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-16 00:33:57,345 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-16 00:33:58,126 INFO gateway.run: Connecting to telegram...
+2026-11-16 00:33:58,373 INFO gateway.run: Connecting to discord...
+2026-11-16 00:33:58,573 INFO gateway.run: Connecting to slack...
+2026-11-16 00:33:58,719 INFO gateway.run: Connecting to api_server...
+2026-11-16 00:33:58,990 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-16 00:33:59,438 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-16 00:34:00,002 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-16 00:34:02,910 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-16 00:34:03,339 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8081 (model: hermes-agent)
+2026-11-16 00:34:03,457 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-16 00:34:03,463 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-16 00:34:06,466 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-16 00:34:14,794 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-16 00:34:14,944 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-16 00:34:15,141 INFO gateway.run: ✓ telegram connected
+2026-11-16 00:34:15,287 INFO gateway.run: ✓ discord connected
+2026-11-16 00:34:15,449 INFO gateway.run: ✓ slack connected
+2026-11-16 00:34:15,594 INFO gateway.run: ✓ api_server connected
+2026-11-16 00:34:15,742 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-16 00:34:16,138 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-16 00:34:16,443 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-16 00:34:16,726 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-16 00:34:17,004 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-16 00:34:17,004 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-16 00:34:17,305 INFO gateway.run: Press Ctrl+C to stop
+2026-11-16 00:34:17,356 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-16 00:34:17,357 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-16 00:34:17,358 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-16 00:34:22,359 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-16 00:35:14,378 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 215s
+2026-11-16 00:35:26,877 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/v1/models' user_agent='Python-urllib/3.11'
+2026-11-16 00:39:28,921 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-16 00:39:28,921 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=1 parent_name=entrypoint.sh loadavg_1m=0.00 parent_cmdline='/bin/sh /usr/local/bin/entrypoint.sh'
+2026-11-16 00:39:29,163 INFO gateway.run: Stopping gateway...
+2026-11-16 00:39:29,302 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-16 00:39:29,316 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.15s
+2026-11-16 00:39:29,478 INFO gateway.run: Shutdown phase: drain done at +0.31s (drain took 0.16s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-16 00:39:30,123 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-16 00:39:30,123 INFO gateway.run: ✓ telegram disconnected (0.65s)
+2026-11-16 00:39:30,124 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-16 00:39:30,124 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-16 00:39:30,124 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-16 00:39:30,124 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-16 00:39:30,252 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-16 00:39:30,253 INFO gateway.run: ✓ api_server disconnected (0.13s)
+2026-11-16 00:39:30,253 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.09s
+2026-11-16 00:39:30,469 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.31s
+2026-11-16 00:39:30,471 INFO gateway.run: Shutdown phase: SessionDB close done at +1.31s
+2026-11-16 00:39:30,592 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-16 00:39:30,744 INFO gateway.run: Gateway stopped (total teardown 1.58s)
+2026-11-16 00:39:30,745 INFO gateway.run: Gateway housekeeping stopped
+2026-11-16 00:39:30,845 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-16 00:40:44,411 INFO gateway.run: Starting Hermes Gateway...
+2026-11-16 00:40:44,412 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-16 00:40:44,419 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-16 00:40:44,419 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-16 00:40:44,682 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-16 00:40:45,199 INFO gateway.run: Connecting to telegram...
+2026-11-16 00:40:45,367 INFO gateway.run: Connecting to discord...
+2026-11-16 00:40:45,516 INFO gateway.run: Connecting to slack...
+2026-11-16 00:40:45,667 INFO gateway.run: Connecting to api_server...
+2026-11-16 00:40:45,828 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-16 00:40:46,213 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-16 00:40:47,333 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-16 00:40:50,193 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-16 00:40:50,633 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8081 (model: hermes-agent)
+2026-11-16 00:40:50,751 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-16 00:40:50,759 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-16 00:40:53,666 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-16 00:41:02,124 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-16 00:41:02,281 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-16 00:41:02,464 INFO gateway.run: ✓ telegram connected
+2026-11-16 00:41:02,607 INFO gateway.run: ✓ discord connected
+2026-11-16 00:41:02,754 INFO gateway.run: ✓ slack connected
+2026-11-16 00:41:02,899 INFO gateway.run: ✓ api_server connected
+2026-11-16 00:41:03,061 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-16 00:41:03,465 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-16 00:41:03,881 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-16 00:41:04,182 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-16 00:41:04,473 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-16 00:41:04,473 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-16 00:41:04,623 INFO gateway.run: Press Ctrl+C to stop
+2026-11-16 00:41:04,674 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-16 00:41:04,755 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-16 00:41:04,755 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-16 00:41:09,203 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 292s
+2026-11-16 00:41:09,756 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-16 00:49:35,111 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-11-16 00:49:35,111 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=1 parent_name=entrypoint.sh loadavg_1m=0.00 parent_cmdline='/bin/sh /usr/local/bin/entrypoint.sh'
+2026-11-16 00:49:35,293 INFO gateway.run: Stopping gateway...
+2026-11-16 00:49:35,538 ERROR hermes_plugins.slack_platform.adapter: [Slack] Send error: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+Traceback (most recent call last):
+  File "/opt/hermes/plugins/platforms/slack/adapter.py", line 2820, in send
+    last_result = await self._get_client(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_client.py", line 2835, in chat_postMessage
+    return await self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 175, in api_call
+    return await self._send(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_base_client.py", line 215, in _send
+    return AsyncSlackResponse(**{**data, **res}).validate()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/slack_sdk/web/async_slack_response.py", line 201, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage, status: 200)
+The server responded with: {'ok': False, 'error': 'not_in_channel'}
+2026-11-16 00:49:35,552 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.26s
+2026-11-16 00:49:35,731 INFO gateway.run: Shutdown phase: drain done at +0.44s (drain took 0.18s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0)
+2026-11-16 00:49:36,324 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Disconnected from Telegram
+2026-11-16 00:49:36,324 INFO gateway.run: ✓ telegram disconnected (0.59s)
+2026-11-16 00:49:36,325 INFO hermes_plugins.discord_platform.adapter: [Discord] Disconnected
+2026-11-16 00:49:36,325 INFO gateway.run: ✓ discord disconnected (0.00s)
+2026-11-16 00:49:36,326 INFO hermes_plugins.slack_platform.adapter: [Slack] Disconnected
+2026-11-16 00:49:36,326 INFO gateway.run: ✓ slack disconnected (0.00s)
+2026-11-16 00:49:36,471 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-11-16 00:49:36,471 INFO gateway.run: ✓ api_server disconnected (0.14s)
+2026-11-16 00:49:36,471 INFO gateway.run: Shutdown phase: all adapters disconnected at +1.18s
+2026-11-16 00:49:36,733 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +1.44s
+2026-11-16 00:49:36,735 INFO gateway.run: Shutdown phase: SessionDB close done at +1.44s
+2026-11-16 00:49:36,955 INFO gateway.run: Gateway stopped by an unexpected signal — persisting gateway_state=running so container_boot auto-starts on the next boot (issue #42675)
+2026-11-16 00:49:37,087 INFO gateway.run: Gateway stopped (total teardown 1.79s)
+2026-11-16 00:49:37,088 INFO gateway.run: Gateway housekeeping stopped
+2026-11-16 00:49:37,188 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-11-16 00:50:45,179 INFO gateway.run: Starting Hermes Gateway...
+2026-11-16 00:50:45,181 INFO gateway.run: Session storage: /hermes/sessions
+2026-11-16 00:50:45,187 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-11-16 00:50:45,187 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-16 00:50:45,415 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-16 00:50:45,963 INFO gateway.run: Connecting to telegram...
+2026-11-16 00:50:46,106 INFO gateway.run: Connecting to discord...
+2026-11-16 00:50:46,258 INFO gateway.run: Connecting to slack...
+2026-11-16 00:50:46,404 INFO gateway.run: Connecting to api_server...
+2026-11-16 00:50:46,566 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback-IP transport disabled via env
+2026-11-16 00:50:46,973 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-11-16 00:50:48,397 WARNING hermes_plugins.discord_platform.adapter: Opus codec not found — voice channel playback disabled
+2026-11-16 00:50:51,227 INFO hermes_plugins.discord_platform.adapter: [Discord] Registered /skill command with 79 skill(s) via autocomplete
+2026-11-16 00:50:51,660 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8081 (model: hermes-agent)
+2026-11-16 00:50:51,780 INFO hermes_plugins.slack_platform.adapter: [Slack] Authenticated as @lumen in workspace Aadit (team: T0CHP443553)
+2026-11-16 00:50:51,789 INFO hermes_plugins.slack_platform.adapter: [Slack] Socket Mode connected (1 workspace(s))
+2026-11-16 00:50:55,304 INFO hermes_plugins.discord_platform.adapter: [Discord] Connected as Lumen#6708
+2026-11-16 00:51:02,883 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-11-16 00:51:03,060 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-11-16 00:51:03,244 INFO gateway.run: ✓ telegram connected
+2026-11-16 00:51:03,389 INFO gateway.run: ✓ discord connected
+2026-11-16 00:51:03,522 INFO gateway.run: ✓ slack connected
+2026-11-16 00:51:03,652 INFO gateway.run: ✓ api_server connected
+2026-11-16 00:51:03,806 INFO gateway.run: Gateway running with 4 platform(s)
+2026-11-16 00:51:04,247 INFO gateway.run: Channel directory built: 1 target(s)
+2026-11-16 00:51:04,505 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-11-16 00:51:04,780 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-11-16 00:51:05,056 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-11-16 00:51:05,056 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 81 hidden (over 60 limit). Use /commands for full list.
+2026-11-16 00:51:05,390 INFO gateway.run: Press Ctrl+C to stop
+2026-11-16 00:51:05,449 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-16 00:51:05,451 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/hermes/kanban/.dispatcher.lock)
+2026-11-16 00:51:05,452 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=7 (set kanban.max_in_progress in config.yaml to override)
+2026-11-16 00:51:06,374 WARNING hermes_plugins.discord_platform.adapter: [Discord] Discord rate-limited slash command sync; retrying after 127s
+2026-11-16 00:51:10,453 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-16 01:11:01,583 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: Bad Gateway
+2026-11-16 01:11:01,584 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-11-16 01:11:07,588 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-11-16 01:11:07,588 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-11-16 01:11:37,959 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: Timed out
+2026-11-16 01:11:37,959 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-11-16 01:12:18,556 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: Timed out
+2026-11-16 01:12:18,556 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 4/10), reconnecting in 40s. Error: Timed out
+2026-11-16 01:12:59,099 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 4); health pending getUpdates progress
+2026-11-16 01:12:59,543 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 5)
+2026-11-16 01:12:59,791 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:9019428898 (131 chars)
+2026-11-16 01:13:00,073 INFO gateway.run: inbound message: platform=telegram user=Aadit Kshirsagar chat=9019428898 msg="Remember this exactly, as its own memory: Maya's fictional favorite study snack " reply_to_id=None reply_to_text=''
+2026-11-16 01:13:30,006 INFO gateway.run: response ready: platform=telegram chat=9019428898 time=29.9s api_calls=2 response=5 chars
+2026-11-16 01:13:31,701 INFO gateway.platforms.base: [Telegram] Sending response (5 chars) to 9019428898
+2026-11-16 01:14:14,010 INFO gateway.run: inbound message: platform=slack user=Aadit Kshirsagar chat=C0CJNQG5EC8 msg='What is Maya’s fictional favorite study snack? Reply with the snack only.' reply_to_id=None reply_to_text=''
+2026-11-16 01:14:26,060 INFO gateway.run: response ready: platform=slack chat=C0CJNQG5EC8 time=12.0s api_calls=1 response=13 chars
+2026-11-16 01:14:31,165 INFO gateway.platforms.base: [Slack] Sending response (13 chars) to C0CJNQG5EC8
+2026-11-16 01:18:34,060 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1571695939192619081:1571695939192619081 (97 chars)
+2026-11-16 01:18:34,747 INFO gateway.run: inbound message: platform=discord user=aadit chat=1571695939192619081 msg="<@&1571353395552587809> What is Maya's fictional favorite study snack? Reply wit" reply_to_id=None reply_to_text=''
+2026-11-16 01:18:51,011 INFO gateway.run: discord auto-thread rename: thread=1571695939192619081 lane=native new_title="Identify Maya's fictional favorite study snack"
+2026-11-16 01:18:52,167 INFO gateway.run: response ready: platform=discord chat=1571695939192619081 time=17.4s api_calls=1 response=13 chars
+2026-11-16 01:19:00,586 INFO gateway.platforms.base: [Discord] Sending response (13 chars) to 1571695939192619081
+2026-11-16 02:17:39,319 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:9019428898 (idle=3852s)
+2026-11-16 02:17:39,320 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:slack:group:T0CHP443553:C0CJNQG5EC8:1794791652.918299 (idle=3796s)
+2026-11-16 02:17:39,322 INFO gateway.run: Agent cache idle sweep: evicted 2 agent(s)
+2026-11-16 02:22:41,082 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:discord:thread:1571695939192619081:1571695939192619081 (idle=3831s)
+2026-11-16 02:22:41,083 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-11-16 14:36:23,625 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: httpx.ReadError: 
+2026-11-16 14:36:23,625 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: httpx.ReadError: 
+2026-11-16 14:36:29,584 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 1); health pending getUpdates progress
+2026-11-16 14:36:40,090 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 6)
+2026-11-16 18:30:51,407 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 00:00:08,508 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 00:50:08,498 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 10:10:13,378 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: httpx.ReadError: 
+2026-11-17 10:10:13,378 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: httpx.ReadError: 
+2026-11-17 10:10:19,391 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 1); health pending getUpdates progress
+2026-11-17 10:10:29,850 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 7)
+2026-11-17 13:38:17,720 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 14:20:19,306 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: httpx.ReadError: 
+2026-11-17 14:20:19,306 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: httpx.ReadError: 
+2026-11-17 14:20:25,502 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 1); health pending getUpdates progress
+2026-11-17 14:20:35,948 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 8)
+2026-11-17 15:57:42,421 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 17:07:02,813 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 17:54:00,419 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-17 21:45:25,122 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: httpx.ReadError: 
+2026-11-17 21:45:25,122 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: httpx.ReadError: 
+2026-11-17 21:45:31,025 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 1); health pending getUpdates progress
+2026-11-17 21:45:41,480 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 9)
+2026-11-18 17:43:47,931 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: httpx.ConnectError: All connection attempts failed
+2026-11-18 17:43:47,931 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: httpx.ConnectError: All connection attempts failed
+2026-11-18 17:43:54,162 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 1); health pending getUpdates progress
+2026-11-18 17:44:06,948 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 10)
+2026-11-18 20:00:23,534 WARNING hermes_plugins.slack_platform.adapter: [Slack] Socket Mode unhealthy (transport disconnected); reconnecting
+2026-11-18 23:47:37,743 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network _redact_telegram_error_text(error), scheduling reconnect: httpx.ReadError: 
+2026-11-18 23:47:37,743 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: httpx.ReadError: 
+2026-11-18 23:47:43,649 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after network error (attempt 1); health pending getUpdates progress
+2026-11-18 23:47:54,098 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 11)
+2026-11-19 04:07:50,337 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:9019428898 (71 chars)
+2026-11-19 04:07:50,547 INFO gateway.run: inbound message: platform=telegram user=Aadit Kshirsagar chat=9019428898 msg='Remember that my fictional project is called Bluebird and is due Friday' reply_to_id=None reply_to_text=''
+2026-11-19 04:08:07,366 INFO gateway.run: response ready: platform=telegram chat=9019428898 time=16.8s api_calls=2 response=111 chars
+2026-11-19 04:08:08,743 INFO gateway.platforms.base: [Telegram] Sending response (111 chars) to 9019428898
+2026-11-19 04:08:25,282 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1572825848657215509:1572825848657215509 (56 chars)
+2026-11-19 04:08:25,916 INFO gateway.run: inbound message: platform=discord user=aadit chat=1572825848657215509 msg='What is my fictional project called, and when is it due?' reply_to_id=None reply_to_text=''
+2026-11-19 04:08:39,110 INFO gateway.run: response ready: platform=discord chat=1572825848657215509 time=13.2s api_calls=1 response=149 chars
+2026-11-19 04:08:41,813 INFO gateway.platforms.base: [Discord] Sending response (149 chars) to 1572825848657215509
+2026-11-19 04:09:09,680 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1572826028655648889:1572826028655648889 (56 chars)
+2026-11-19 04:09:10,312 INFO gateway.run: inbound message: platform=discord user=aadit chat=1572826028655648889 msg='What is my fictional project called, and when is it due?' reply_to_id=None reply_to_text=''
+2026-11-19 04:09:23,815 INFO gateway.run: response ready: platform=discord chat=1572826028655648889 time=13.5s api_calls=1 response=177 chars
+2026-11-19 04:09:32,297 INFO gateway.platforms.base: [Discord] Sending response (177 chars) to 1572826028655648889
+2026-11-19 04:09:48,124 INFO hermes_plugins.discord_platform.adapter: [Discord] slash '/sethome' invoked by user=aadit.11 id=560195539266961421 channel=1571353271161856094 guild=1571353271161856091
+2026-11-19 04:09:48,912 INFO gateway.platforms.base: [Discord] Sending response (140 chars) to 1571353271161856094
+2026-11-19 04:10:08,652 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1572826282536992819:1572826282536992819 (56 chars)
+2026-11-19 04:10:09,360 INFO gateway.run: inbound message: platform=discord user=aadit chat=1572826282536992819 msg='What is my fictional project called, and when is it due?' reply_to_id=None reply_to_text=''
+2026-11-19 04:10:31,155 INFO gateway.run: response ready: platform=discord chat=1572826282536992819 time=21.8s api_calls=1 response=128 chars
+2026-11-19 04:10:33,695 INFO gateway.platforms.base: [Discord] Sending response (128 chars) to 1572826282536992819
+2026-11-19 04:11:37,180 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1572826653418065983:1572826653418065983 (56 chars)
+2026-11-19 04:11:37,848 INFO gateway.run: inbound message: platform=discord user=aadit chat=1572826653418065983 msg='What is my fictional project called, and when is it due?' reply_to_id=None reply_to_text=''
+2026-11-19 04:11:53,473 INFO gateway.run: response ready: platform=discord chat=1572826653418065983 time=15.6s api_calls=1 response=138 chars
+2026-11-19 04:11:57,127 INFO gateway.platforms.base: [Discord] Sending response (138 chars) to 1572826653418065983
+2026-11-19 04:12:58,128 INFO gateway.run: inbound message: platform=slack user=Aadit Kshirsagar chat=C0CJNQG5EC8 msg='Which app did I tell you about Bluebird on?' reply_to_id=None reply_to_text=''
+2026-11-19 04:13:17,000 INFO gateway.run: response ready: platform=slack chat=C0CJNQG5EC8 time=18.9s api_calls=2 response=75 chars
+2026-11-19 04:13:19,986 INFO gateway.platforms.base: [Slack] Sending response (75 chars) to C0CJNQG5EC8
+2026-11-19 04:19:49,612 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:9019428898 (93 chars)
+2026-11-19 04:19:49,806 INFO gateway.run: inbound message: platform=telegram user=Aadit Kshirsagar chat=9019428898 msg='Explain and save in memory that my fictional project is called Bluebird and it i' reply_to_id=None reply_to_text=''
+2026-11-19 04:19:59,961 INFO gateway.run: response ready: platform=telegram chat=9019428898 time=10.2s api_calls=1 response=191 chars
+2026-11-19 04:20:02,876 INFO gateway.platforms.base: [Telegram] Sending response (191 chars) to 9019428898
+2026-11-19 04:20:22,471 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1572828855847227523:1572828855847227523 (63 chars)
+2026-11-19 04:20:23,091 INFO gateway.run: inbound message: platform=discord user=aadit chat=1572828855847227523 msg='Explain what my fictional project is called and when it is due?' reply_to_id=None reply_to_text=''
+2026-11-19 04:20:34,499 INFO gateway.run: discord auto-thread rename: thread=1572828855847227523 lane=native new_title='Explain fictional project name and deadline'
+2026-11-19 04:21:14,691 INFO gateway.run: response ready: platform=discord chat=1572828855847227523 time=51.6s api_calls=5 response=247 chars
+2026-11-19 04:21:19,376 INFO gateway.platforms.base: [Discord] Sending response (247 chars) to 1572828855847227523
+2026-11-19 04:27:05,794 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:9019428898 (102 chars)
+2026-11-19 04:27:05,943 INFO gateway.run: inbound message: platform=telegram user=Aadit Kshirsagar chat=9019428898 msg='Explain and save in memory that my fictional study club is called Northstar and ' reply_to_id=None reply_to_text=''
+2026-11-19 04:27:17,326 INFO gateway.run: response ready: platform=telegram chat=9019428898 time=11.4s api_calls=2 response=144 chars
+2026-11-19 04:27:19,817 INFO gateway.platforms.base: [Telegram] Sending response (144 chars) to 9019428898
+2026-11-19 04:27:38,662 INFO hermes_plugins.discord_platform.adapter: [Discord] Flushing text batch agent:main:discord:thread:1572830686664982550:1572830686664982550 (64 chars)
+2026-11-19 04:27:39,324 INFO gateway.run: inbound message: platform=discord user=aadit chat=1572830686664982550 msg='Explain what my fictional study club is called and when it meets' reply_to_id=None reply_to_text=''
+2026-11-19 04:27:54,199 INFO gateway.run: response ready: platform=discord chat=1572830686664982550 time=14.9s api_calls=1 response=117 chars
+2026-11-19 04:27:59,508 INFO gateway.run: discord auto-thread rename: thread=1572830686664982550 lane=native new_title='Explain fictional study club name and schedule'
+2026-11-19 04:28:00,336 INFO gateway.platforms.base: [Discord] Sending response (117 chars) to 1572830686664982550
+2026-11-19 04:28:21,074 INFO gateway.run: inbound message: platform=slack user=Aadit Kshirsagar chat=C0CJNQG5EC8 msg='Explain which app I told you about Northstar on.' reply_to_id=None reply_to_text=''
+2026-11-19 04:28:40,280 INFO gateway.run: response ready: platform=slack chat=C0CJNQG5EC8 time=19.2s api_calls=2 response=301 chars
+2026-11-19 04:28:44,562 INFO gateway.platforms.base: [Slack] Sending response (301 chars) to C0CJNQG5EC8
